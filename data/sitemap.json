@@ -1,0 +1,2393 @@
+{
+    "Andalucía": {
+        "path": "laboral/andalucia",
+        "has_calendar": true,
+        "children": {
+            "Almería": {
+                "path": "laboral/andalucia/almeria",
+                "has_calendar": false,
+                "children": {
+                    "Abla": {
+                        "path": "laboral/andalucia/almeria/abla",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Abrucena": {
+                        "path": "laboral/andalucia/almeria/abrucena",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Adra": {
+                        "path": "laboral/andalucia/almeria/adra",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Almería": {
+                        "path": "laboral/andalucia/almeria/almeria",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Carboneras": {
+                        "path": "laboral/andalucia/almeria/carboneras",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Garrucha": {
+                        "path": "laboral/andalucia/almeria/garrucha",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Huércal-Overa": {
+                        "path": "laboral/andalucia/almeria/huercal-overa",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Níjar": {
+                        "path": "laboral/andalucia/almeria/nijar",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Roquetas de Mar": {
+                        "path": "laboral/andalucia/almeria/roquetas-de-mar",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Vélez-Rubio": {
+                        "path": "laboral/andalucia/almeria/velez-rubio",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Vícar": {
+                        "path": "laboral/andalucia/almeria/vicar",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "El Ejido": {
+                        "path": "laboral/andalucia/almeria/el-ejido",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Cádiz": {
+                "path": "laboral/andalucia/cadiz",
+                "has_calendar": false,
+                "children": {
+                    "Algeciras": {
+                        "path": "laboral/andalucia/cadiz/algeciras",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Arcos de la Frontera": {
+                        "path": "laboral/andalucia/cadiz/arcos-de-la-frontera",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Barbate": {
+                        "path": "laboral/andalucia/cadiz/barbate",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Los Barrios": {
+                        "path": "laboral/andalucia/cadiz/los-barrios",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Cádiz": {
+                        "path": "laboral/andalucia/cadiz/cadiz",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Conil de la Frontera": {
+                        "path": "laboral/andalucia/cadiz/conil-de-la-frontera",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Chiclana de la Frontera": {
+                        "path": "laboral/andalucia/cadiz/chiclana-de-la-frontera",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Jerez de la Frontera": {
+                        "path": "laboral/andalucia/cadiz/jerez-de-la-frontera",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "La Línea de la Concepción": {
+                        "path": "laboral/andalucia/cadiz/la-linea-de-la-concepcion",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "El Puerto de Santa María": {
+                        "path": "laboral/andalucia/cadiz/el-puerto-de-santa-maria",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Puerto Real": {
+                        "path": "laboral/andalucia/cadiz/puerto-real",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Rota": {
+                        "path": "laboral/andalucia/cadiz/rota",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "San Fernando": {
+                        "path": "laboral/andalucia/cadiz/san-fernando",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sanlúcar de Barrameda": {
+                        "path": "laboral/andalucia/cadiz/sanlucar-de-barrameda",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "San Roque": {
+                        "path": "laboral/andalucia/cadiz/san-roque",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Córdoba": {
+                "path": "laboral/andalucia/cordoba",
+                "has_calendar": false,
+                "children": {
+                    "Aguilar de la Frontera": {
+                        "path": "laboral/andalucia/cordoba/aguilar-de-la-frontera",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Baena": {
+                        "path": "laboral/andalucia/cordoba/baena",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Cabra": {
+                        "path": "laboral/andalucia/cordoba/cabra",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Córdoba": {
+                        "path": "laboral/andalucia/cordoba/cordoba",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Hinojosa del Duque": {
+                        "path": "laboral/andalucia/cordoba/hinojosa-del-duque",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Lucena": {
+                        "path": "laboral/andalucia/cordoba/lucena",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Montilla": {
+                        "path": "laboral/andalucia/cordoba/montilla",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Palma del Río": {
+                        "path": "laboral/andalucia/cordoba/palma-del-rio",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Priego de Córdoba": {
+                        "path": "laboral/andalucia/cordoba/priego-de-cordoba",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Puente Genil": {
+                        "path": "laboral/andalucia/cordoba/puente-genil",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Granada": {
+                "path": "laboral/andalucia/granada",
+                "has_calendar": false,
+                "children": {
+                    "Albolote": {
+                        "path": "laboral/andalucia/granada/albolote",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Alhama de Granada": {
+                        "path": "laboral/andalucia/granada/alhama-de-granada",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Almuñécar": {
+                        "path": "laboral/andalucia/granada/almunecar",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Armilla": {
+                        "path": "laboral/andalucia/granada/armilla",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Baza": {
+                        "path": "laboral/andalucia/granada/baza",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Churriana de la Vega": {
+                        "path": "laboral/andalucia/granada/churriana-de-la-vega",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Granada": {
+                        "path": "laboral/andalucia/granada/granada",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Guadix": {
+                        "path": "laboral/andalucia/granada/guadix",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Güejar Sierra": {
+                        "path": "laboral/andalucia/granada/guejar-sierra",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Huéscar": {
+                        "path": "laboral/andalucia/granada/huescar",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Loja": {
+                        "path": "laboral/andalucia/granada/loja",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Maracena": {
+                        "path": "laboral/andalucia/granada/maracena",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Motril": {
+                        "path": "laboral/andalucia/granada/motril",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Órgiva": {
+                        "path": "laboral/andalucia/granada/orgiva",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Peligros": {
+                        "path": "laboral/andalucia/granada/peligros",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Pulianas": {
+                        "path": "laboral/andalucia/granada/pulianas",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Salobreña": {
+                        "path": "laboral/andalucia/granada/salobrenya",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "La Zubia": {
+                        "path": "laboral/andalucia/granada/la-zubia",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Huelva": {
+                "path": "laboral/andalucia/huelva",
+                "has_calendar": false,
+                "children": {
+                    "Aljaraque": {
+                        "path": "laboral/andalucia/huelva/aljaraque",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Almonte": {
+                        "path": "laboral/andalucia/huelva/almonte",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Ayamonte": {
+                        "path": "laboral/andalucia/huelva/ayamonte",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Huelva": {
+                        "path": "laboral/andalucia/huelva/huelva",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Isla Cristina": {
+                        "path": "laboral/andalucia/huelva/isla-cristina",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Lepe": {
+                        "path": "laboral/andalucia/huelva/lepe",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Moguer": {
+                        "path": "laboral/andalucia/huelva/moguer",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Jaén": {
+                "path": "laboral/andalucia/jaen",
+                "has_calendar": false,
+                "children": {
+                    "Alcalá la Real": {
+                        "path": "laboral/andalucia/jaen/alcala-la-real",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Andújar": {
+                        "path": "laboral/andalucia/jaen/andujar",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Baeza": {
+                        "path": "laboral/andalucia/jaen/baeza",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "La Carolina": {
+                        "path": "laboral/andalucia/jaen/la-carolina",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Cazorla": {
+                        "path": "laboral/andalucia/jaen/cazorla",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Guarromán": {
+                        "path": "laboral/andalucia/jaen/guarroman",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Jaén": {
+                        "path": "laboral/andalucia/jaen/jaen",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Linares": {
+                        "path": "laboral/andalucia/jaen/linares",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Martos": {
+                        "path": "laboral/andalucia/jaen/martos",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Úbeda": {
+                        "path": "laboral/andalucia/jaen/ubeda",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Villacarrillo": {
+                        "path": "laboral/andalucia/jaen/villacarrillo",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Málaga": {
+                "path": "laboral/andalucia/malaga",
+                "has_calendar": false,
+                "children": {
+                    "Alhaurín de la Torre": {
+                        "path": "laboral/andalucia/malaga/alhaurin-de-la-torre",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Alhaurín el Grande": {
+                        "path": "laboral/andalucia/malaga/alhaurin-el-grande",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Antequera": {
+                        "path": "laboral/andalucia/malaga/antequera",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Benalmádena": {
+                        "path": "laboral/andalucia/malaga/benalmadena",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Cártama": {
+                        "path": "laboral/andalucia/malaga/cartama",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Coín": {
+                        "path": "laboral/andalucia/malaga/coin",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Estepona": {
+                        "path": "laboral/andalucia/malaga/estepona",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Fuengirola": {
+                        "path": "laboral/andalucia/malaga/fuengirola",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Málaga": {
+                        "path": "laboral/andalucia/malaga/malaga",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Marbella": {
+                        "path": "laboral/andalucia/malaga/marbella",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Mijas": {
+                        "path": "laboral/andalucia/malaga/mijas",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Nerja": {
+                        "path": "laboral/andalucia/malaga/nerja",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Rincón de la Victoria": {
+                        "path": "laboral/andalucia/malaga/rincon-de-la-victoria",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Ronda": {
+                        "path": "laboral/andalucia/malaga/ronda",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Vélez-Málaga": {
+                        "path": "laboral/andalucia/malaga/velez-malaga",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Torremolinos": {
+                        "path": "laboral/andalucia/malaga/torremolinos",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Sevilla": {
+                "path": "laboral/andalucia/sevilla",
+                "has_calendar": false,
+                "children": {
+                    "Alcalá de Guadaíra": {
+                        "path": "laboral/andalucia/sevilla/alcala-de-guadaira",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Camas": {
+                        "path": "laboral/andalucia/sevilla/camas",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Carmona": {
+                        "path": "laboral/andalucia/sevilla/carmona",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Coria del Río": {
+                        "path": "laboral/andalucia/sevilla/coria-del-rio",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Dos Hermanas": {
+                        "path": "laboral/andalucia/sevilla/dos-hermanas",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Écija": {
+                        "path": "laboral/andalucia/sevilla/ecija",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Huévar del Aljarafe": {
+                        "path": "laboral/andalucia/sevilla/huevar-del-aljarafe",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Lebrija": {
+                        "path": "laboral/andalucia/sevilla/lebrija",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Mairena del Aljarafe": {
+                        "path": "laboral/andalucia/sevilla/mairena-del-aljarafe",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Morón de la Frontera": {
+                        "path": "laboral/andalucia/sevilla/moron-de-la-frontera",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Los Palacios y Villafranca": {
+                        "path": "laboral/andalucia/sevilla/los-palacios-y-villafranca",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "La Rinconada": {
+                        "path": "laboral/andalucia/sevilla/la-rinconada",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "San Juan de Aznalfarache": {
+                        "path": "laboral/andalucia/sevilla/san-juan-de-aznalfarache",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sevilla": {
+                        "path": "laboral/andalucia/sevilla/sevilla",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Tomares": {
+                        "path": "laboral/andalucia/sevilla/tomares",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Utrera": {
+                        "path": "laboral/andalucia/sevilla/utrera",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "Aragón": {
+        "path": "laboral/aragon",
+        "has_calendar": true,
+        "children": {
+            "Huesca": {
+                "path": "laboral/aragon/huesca",
+                "has_calendar": false,
+                "children": {
+                    "Huesca": {
+                        "path": "laboral/aragon/huesca/huesca",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Teruel": {
+                "path": "laboral/aragon/teruel",
+                "has_calendar": false,
+                "children": {
+                    "Teruel": {
+                        "path": "laboral/aragon/teruel/teruel",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Villastar": {
+                        "path": "laboral/aragon/teruel/villastar",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Zaragoza": {
+                "path": "laboral/aragon/zaragoza",
+                "has_calendar": false,
+                "children": {
+                    "Zaragoza": {
+                        "path": "laboral/aragon/zaragoza/zaragoza",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "Principado de Asturias": {
+        "path": "laboral/asturias",
+        "has_calendar": true,
+        "children": {
+            "Asturias": {
+                "path": "laboral/asturias/asturias",
+                "has_calendar": false,
+                "children": {
+                    "Avilés": {
+                        "path": "laboral/asturias/asturias/aviles",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Castrillón": {
+                        "path": "laboral/asturias/asturias/castrillon",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Gijón": {
+                        "path": "laboral/asturias/asturias/gijon",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Langreo": {
+                        "path": "laboral/asturias/asturias/langreo",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Mieres": {
+                        "path": "laboral/asturias/asturias/mieres",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Oviedo": {
+                        "path": "laboral/asturias/asturias/oviedo",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Siero": {
+                        "path": "laboral/asturias/asturias/siero",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "Islas Baleares": {
+        "path": "laboral/baleares",
+        "has_calendar": true,
+        "children": {
+            "Islas Baleares": {
+                "path": "laboral/baleares/islas-baleares",
+                "has_calendar": false,
+                "children": {
+                    "Calvià": {
+                        "path": "laboral/baleares/islas-baleares/calvia",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Ciutadella de Menorca": {
+                        "path": "laboral/baleares/islas-baleares/ciutadella-de-menorca",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Eivissa": {
+                        "path": "laboral/baleares/islas-baleares/eivissa",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Inca": {
+                        "path": "laboral/baleares/islas-baleares/inca",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Llucmajor": {
+                        "path": "laboral/baleares/islas-baleares/llucmajor",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Maó": {
+                        "path": "laboral/baleares/islas-baleares/mao",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Manacor": {
+                        "path": "laboral/baleares/islas-baleares/manacor",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Marratxí": {
+                        "path": "laboral/baleares/islas-baleares/marratxi",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Palma": {
+                        "path": "laboral/baleares/islas-baleares/palma",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sant Antoni de Portmany": {
+                        "path": "laboral/baleares/islas-baleares/sant-antoni-de-portmany",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sant Josep de sa Talaia": {
+                        "path": "laboral/baleares/islas-baleares/sant-josep-de-sa-talaia",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Santa Eulalia del Río": {
+                        "path": "laboral/baleares/islas-baleares/santa-eulalia-del-rio",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "Canarias": {
+        "path": "laboral/canarias",
+        "has_calendar": true,
+        "children": {
+            "Las Palmas": {
+                "path": "laboral/canarias/las-palmas",
+                "has_calendar": false,
+                "children": {
+                    "Agüimes": {
+                        "path": "laboral/canarias/las-palmas/aguimes",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Arrecife": {
+                        "path": "laboral/canarias/las-palmas/arrecife",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Arucas": {
+                        "path": "laboral/canarias/las-palmas/arucas",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Gáldar": {
+                        "path": "laboral/canarias/las-palmas/galdar",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Ingenio": {
+                        "path": "laboral/canarias/las-palmas/ingenio",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Mogán": {
+                        "path": "laboral/canarias/las-palmas/mogan",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "La Oliva": {
+                        "path": "laboral/canarias/las-palmas/la-oliva",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Las Palmas de Gran Canaria": {
+                        "path": "laboral/canarias/las-palmas/las-palmas-de-gran-canaria",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Puerto del Rosario": {
+                        "path": "laboral/canarias/las-palmas/puerto-del-rosario",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "San Bartolomé de Tirajana": {
+                        "path": "laboral/canarias/las-palmas/san-bartolome-de-tirajana",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Santa Lucía de Tirajana": {
+                        "path": "laboral/canarias/las-palmas/santa-lucia-de-tirajana",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Teguise": {
+                        "path": "laboral/canarias/las-palmas/teguise",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Telde": {
+                        "path": "laboral/canarias/las-palmas/telde",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Tías": {
+                        "path": "laboral/canarias/las-palmas/tias",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Santa Cruz de Tenerife": {
+                "path": "laboral/canarias/santa-cruz-de-tenerife",
+                "has_calendar": false,
+                "children": {
+                    "Adeje": {
+                        "path": "laboral/canarias/santa-cruz-de-tenerife/adeje",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Arona": {
+                        "path": "laboral/canarias/santa-cruz-de-tenerife/arona",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Candelaria": {
+                        "path": "laboral/canarias/santa-cruz-de-tenerife/candelaria",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Granadilla de Abona": {
+                        "path": "laboral/canarias/santa-cruz-de-tenerife/granadilla-de-abona",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "San Cristóbal de La Laguna": {
+                        "path": "laboral/canarias/santa-cruz-de-tenerife/san-cristobal-de-la-laguna",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Santa Cruz de Tenerife": {
+                        "path": "laboral/canarias/santa-cruz-de-tenerife/santa-cruz-de-tenerife",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "Cantabria": {
+        "path": "laboral/cantabria",
+        "has_calendar": true,
+        "children": {
+            "Cantabria": {
+                "path": "laboral/cantabria/cantabria",
+                "has_calendar": false,
+                "children": {
+                    "Camargo": {
+                        "path": "laboral/cantabria/cantabria/camargo",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Castro-Urdiales": {
+                        "path": "laboral/cantabria/cantabria/castro-urdiales",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Piélagos": {
+                        "path": "laboral/cantabria/cantabria/pielagos",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Santander": {
+                        "path": "laboral/cantabria/cantabria/santander",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Torrelavega": {
+                        "path": "laboral/cantabria/cantabria/torrelavega",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "Castilla y León": {
+        "path": "laboral/castilla-y-leon",
+        "has_calendar": true,
+        "children": {
+            "Ávila": {
+                "path": "laboral/castilla-y-leon/avila",
+                "has_calendar": false,
+                "children": {
+                    "Ávila": {
+                        "path": "laboral/castilla-y-leon/avila/avila",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Burgos": {
+                "path": "laboral/castilla-y-leon/burgos",
+                "has_calendar": false,
+                "children": {
+                    "Aranda de Duero": {
+                        "path": "laboral/castilla-y-leon/burgos/aranda-de-duero",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Burgos": {
+                        "path": "laboral/castilla-y-leon/burgos/burgos",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Miranda de Ebro": {
+                        "path": "laboral/castilla-y-leon/burgos/miranda-de-ebro",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Valle de Mena": {
+                        "path": "laboral/castilla-y-leon/burgos/valle-de-mena",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "León": {
+                "path": "laboral/castilla-y-leon/leon",
+                "has_calendar": false,
+                "children": {
+                    "León": {
+                        "path": "laboral/castilla-y-leon/leon/leon",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Ponferrada": {
+                        "path": "laboral/castilla-y-leon/leon/ponferrada",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "San Andrés del Rabanedo": {
+                        "path": "laboral/castilla-y-leon/leon/san-andres-del-rabanedo",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Palencia": {
+                "path": "laboral/castilla-y-leon/palencia",
+                "has_calendar": false,
+                "children": {
+                    "Palencia": {
+                        "path": "laboral/castilla-y-leon/palencia/palencia",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Salamanca": {
+                "path": "laboral/castilla-y-leon/salamanca",
+                "has_calendar": false,
+                "children": {
+                    "Salamanca": {
+                        "path": "laboral/castilla-y-leon/salamanca/salamanca",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Segovia": {
+                "path": "laboral/castilla-y-leon/segovia",
+                "has_calendar": false,
+                "children": {
+                    "Segovia": {
+                        "path": "laboral/castilla-y-leon/segovia/segovia",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Soria": {
+                "path": "laboral/castilla-y-leon/soria",
+                "has_calendar": false,
+                "children": {
+                    "Soria": {
+                        "path": "laboral/castilla-y-leon/soria/soria",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Valladolid": {
+                "path": "laboral/castilla-y-leon/valladolid",
+                "has_calendar": false,
+                "children": {
+                    "Valladolid": {
+                        "path": "laboral/castilla-y-leon/valladolid/valladolid",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Zamora": {
+                "path": "laboral/castilla-y-leon/zamora",
+                "has_calendar": false,
+                "children": {
+                    "Zamora": {
+                        "path": "laboral/castilla-y-leon/zamora/zamora",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "Castilla La Mancha": {
+        "path": "laboral/castilla-la-mancha",
+        "has_calendar": true,
+        "children": {
+            "Albacete": {
+                "path": "laboral/castilla-la-mancha/albacete",
+                "has_calendar": false,
+                "children": {
+                    "Albacete": {
+                        "path": "laboral/castilla-la-mancha/albacete/albacete",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Almansa": {
+                        "path": "laboral/castilla-la-mancha/albacete/almansa",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Hellín": {
+                        "path": "laboral/castilla-la-mancha/albacete/hellin",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Villarrobledo": {
+                        "path": "laboral/castilla-la-mancha/albacete/villarrobledo",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Ciudad Real": {
+                "path": "laboral/castilla-la-mancha/ciudad-real",
+                "has_calendar": false,
+                "children": {
+                    "Alcázar de San Juan": {
+                        "path": "laboral/castilla-la-mancha/ciudad-real/alcazar-de-san-juan",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Ciudad Real": {
+                        "path": "laboral/castilla-la-mancha/ciudad-real/ciudad-real",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Puertollano": {
+                        "path": "laboral/castilla-la-mancha/ciudad-real/puertollano",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "La Solana": {
+                        "path": "laboral/castilla-la-mancha/ciudad-real/la-solana",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Tomelloso": {
+                        "path": "laboral/castilla-la-mancha/ciudad-real/tomelloso",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Valdepeñas": {
+                        "path": "laboral/castilla-la-mancha/ciudad-real/valdepenyas",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Cuenca": {
+                "path": "laboral/castilla-la-mancha/cuenca",
+                "has_calendar": false,
+                "children": {
+                    "Cuenca": {
+                        "path": "laboral/castilla-la-mancha/cuenca/cuenca",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Guadalajara": {
+                "path": "laboral/castilla-la-mancha/guadalajara",
+                "has_calendar": false,
+                "children": {
+                    "Azuqueca de Henares": {
+                        "path": "laboral/castilla-la-mancha/guadalajara/azuqueca-de-henares",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "El Casar": {
+                        "path": "laboral/castilla-la-mancha/guadalajara/el-casar",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Guadalajara": {
+                        "path": "laboral/castilla-la-mancha/guadalajara/guadalajara",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Toledo": {
+                "path": "laboral/castilla-la-mancha/toledo",
+                "has_calendar": false,
+                "children": {
+                    "Toledo": {
+                        "path": "laboral/castilla-la-mancha/toledo/toledo",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "Cataluña": {
+        "path": "laboral/catalunya",
+        "has_calendar": true,
+        "children": {
+            "Barcelona": {
+                "path": "laboral/catalunya/barcelona",
+                "has_calendar": false,
+                "children": {
+                    "Badalona": {
+                        "path": "laboral/catalunya/barcelona/badalona",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Barcelona": {
+                        "path": "laboral/catalunya/barcelona/barcelona",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Caldes d'Estrac": {
+                        "path": "laboral/catalunya/barcelona/caldes-destrac",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Calella": {
+                        "path": "laboral/catalunya/barcelona/calella",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Castellar del Vallès": {
+                        "path": "laboral/catalunya/barcelona/castellar-del-valles",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Castelldefels": {
+                        "path": "laboral/catalunya/barcelona/castelldefels",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Cornellà de Llobregat": {
+                        "path": "laboral/catalunya/barcelona/cornella-de-llobregat",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Esparreguera": {
+                        "path": "laboral/catalunya/barcelona/esparreguera",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Esplugues de Llobregat": {
+                        "path": "laboral/catalunya/barcelona/esplugues-de-llobregat",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Gavà": {
+                        "path": "laboral/catalunya/barcelona/gava",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Granollers": {
+                        "path": "laboral/catalunya/barcelona/granollers",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "L'Hospitalet de Llobregat": {
+                        "path": "laboral/catalunya/barcelona/l-hospitalet-de-llobregat",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Igualada": {
+                        "path": "laboral/catalunya/barcelona/igualada",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Malgrat de Mar": {
+                        "path": "laboral/catalunya/barcelona/malgrat-de-mar",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Manlleu": {
+                        "path": "laboral/catalunya/barcelona/manlleu",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Manresa": {
+                        "path": "laboral/catalunya/barcelona/manresa",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Martorell": {
+                        "path": "laboral/catalunya/barcelona/martorell",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "El Masnou": {
+                        "path": "laboral/catalunya/barcelona/el-masnou",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Mataró": {
+                        "path": "laboral/catalunya/barcelona/mataro",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Molins de Rei": {
+                        "path": "laboral/catalunya/barcelona/molins-de-rei",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Mollet del Vallès": {
+                        "path": "laboral/catalunya/barcelona/mollet-del-valles",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Montcada i Reixac": {
+                        "path": "laboral/catalunya/barcelona/montcada-i-reixac",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Olesa de Montserrat": {
+                        "path": "laboral/catalunya/barcelona/olesa-de-montserrat",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Pineda de Mar": {
+                        "path": "laboral/catalunya/barcelona/pineda-de-mar",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "El Prat de Llobregat": {
+                        "path": "laboral/catalunya/barcelona/el-prat-de-llobregat",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Premià de Mar": {
+                        "path": "laboral/catalunya/barcelona/premia-de-mar",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Ripollet": {
+                        "path": "laboral/catalunya/barcelona/ripollet",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Rubí": {
+                        "path": "laboral/catalunya/barcelona/rubi",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sabadell": {
+                        "path": "laboral/catalunya/barcelona/sabadell",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sant Adrià de Besòs": {
+                        "path": "laboral/catalunya/barcelona/sant-adria-de-besos",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sant Andreu de la Barca": {
+                        "path": "laboral/catalunya/barcelona/sant-andreu-de-la-barca",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sant Boi de Llobregat": {
+                        "path": "laboral/catalunya/barcelona/sant-boi-de-llobregat",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sant Cebrià de Vallalta": {
+                        "path": "laboral/catalunya/barcelona/sant-cebria-de-vallalta",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sant Cugat del Vallès": {
+                        "path": "laboral/catalunya/barcelona/sant-cugat-del-valles",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sant Feliu de Llobregat": {
+                        "path": "laboral/catalunya/barcelona/sant-feliu-de-llobregat",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sant Joan Despí": {
+                        "path": "laboral/catalunya/barcelona/sant-joan-despi",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Vilassar de Mar": {
+                        "path": "laboral/catalunya/barcelona/vilassar-de-mar",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sant Pere de Ribes": {
+                        "path": "laboral/catalunya/barcelona/sant-pere-de-ribes",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Santa Coloma de Gramenet": {
+                        "path": "laboral/catalunya/barcelona/santa-coloma-de-gramenet",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Santa Perpètua de Mogoda": {
+                        "path": "laboral/catalunya/barcelona/santa-perpetua-de-mogoda",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sant Vicenç dels Horts": {
+                        "path": "laboral/catalunya/barcelona/sant-vicenc-dels-horts",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Cerdanyola del Vallès": {
+                        "path": "laboral/catalunya/barcelona/cerdanyola-del-valles",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sitges": {
+                        "path": "laboral/catalunya/barcelona/sitges",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Terrassa": {
+                        "path": "laboral/catalunya/barcelona/terrassa",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Vic": {
+                        "path": "laboral/catalunya/barcelona/vic",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Viladecans": {
+                        "path": "laboral/catalunya/barcelona/viladecans",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Vilafranca del Penedès": {
+                        "path": "laboral/catalunya/barcelona/vilafranca-del-penedes",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Vilanova i la Geltrú": {
+                        "path": "laboral/catalunya/barcelona/vilanova-i-la-geltru",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Les Roquetes (Sant Pere de Ribes)": {
+                        "path": "laboral/catalunya/barcelona/les-roquetes-sant-pere-de-ribes",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Girona": {
+                "path": "laboral/catalunya/girona",
+                "has_calendar": false,
+                "children": {
+                    "Blanes": {
+                        "path": "laboral/catalunya/girona/blanes",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Figueres": {
+                        "path": "laboral/catalunya/girona/figueres",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Girona": {
+                        "path": "laboral/catalunya/girona/girona",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Lloret de Mar": {
+                        "path": "laboral/catalunya/girona/lloret-de-mar",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Olot": {
+                        "path": "laboral/catalunya/girona/olot",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Palafrugell": {
+                        "path": "laboral/catalunya/girona/palafrugell",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Salt": {
+                        "path": "laboral/catalunya/girona/salt",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sant Feliu de Guíxols": {
+                        "path": "laboral/catalunya/girona/sant-feliu-de-guixols",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Lleida": {
+                "path": "laboral/catalunya/lleida",
+                "has_calendar": false,
+                "children": {
+                    "Lleida": {
+                        "path": "laboral/catalunya/lleida/lleida",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Tarragona": {
+                "path": "laboral/catalunya/tarragona",
+                "has_calendar": false,
+                "children": {
+                    "Reus": {
+                        "path": "laboral/catalunya/tarragona/reus",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Tarragona": {
+                        "path": "laboral/catalunya/tarragona/tarragona",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Vila-seca": {
+                        "path": "laboral/catalunya/tarragona/vila-seca",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "Comunidad Valenciana": {
+        "path": "laboral/comunidad-valenciana",
+        "has_calendar": true,
+        "children": {
+            "Alicante": {
+                "path": "laboral/comunidad-valenciana/alicante",
+                "has_calendar": false,
+                "children": {
+                    "Alcoy/Alcoi": {
+                        "path": "laboral/comunidad-valenciana/alicante/alcoy-alcoi",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "L'Alfàs del Pi": {
+                        "path": "laboral/comunidad-valenciana/alicante/l-alfas-del-pi",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Alicante/Alacant": {
+                        "path": "laboral/comunidad-valenciana/alicante/alicante-alacant",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Altea": {
+                        "path": "laboral/comunidad-valenciana/alicante/altea",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Aspe": {
+                        "path": "laboral/comunidad-valenciana/alicante/aspe",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Benidorm": {
+                        "path": "laboral/comunidad-valenciana/alicante/benidorm",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Calp": {
+                        "path": "laboral/comunidad-valenciana/alicante/calp",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "el Campello": {
+                        "path": "laboral/comunidad-valenciana/alicante/el-campello",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Crevillent": {
+                        "path": "laboral/comunidad-valenciana/alicante/crevillent",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Dénia": {
+                        "path": "laboral/comunidad-valenciana/alicante/denia",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Elche/Elx": {
+                        "path": "laboral/comunidad-valenciana/alicante/elche-elx",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Elda": {
+                        "path": "laboral/comunidad-valenciana/alicante/elda",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Ibi": {
+                        "path": "laboral/comunidad-valenciana/alicante/ibi",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Jávea/Xàbia": {
+                        "path": "laboral/comunidad-valenciana/alicante/javea-xabia",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Mutxamel": {
+                        "path": "laboral/comunidad-valenciana/alicante/mutxamel",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Novelda": {
+                        "path": "laboral/comunidad-valenciana/alicante/novelda",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "la Nucia": {
+                        "path": "laboral/comunidad-valenciana/alicante/la-nucia",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Orihuela": {
+                        "path": "laboral/comunidad-valenciana/alicante/orihuela",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Petrer": {
+                        "path": "laboral/comunidad-valenciana/alicante/petrer",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sant Joan d'Alacant": {
+                        "path": "laboral/comunidad-valenciana/alicante/sant-joan-dalacant",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Santa Pola": {
+                        "path": "laboral/comunidad-valenciana/alicante/santa-pola",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "San Vicente del Raspeig/Sant Vicent del Raspe": {
+                        "path": "laboral/comunidad-valenciana/alicante/san-vicente-del-raspeig-sant-vicent-del-raspe",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Torrevieja": {
+                        "path": "laboral/comunidad-valenciana/alicante/torrevieja",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "la Villajoyosa/Vila Joiosa": {
+                        "path": "laboral/comunidad-valenciana/alicante/la-villajoyosa-vila-joiosa",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Villena": {
+                        "path": "laboral/comunidad-valenciana/alicante/villena",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Pilar de la Horadada": {
+                        "path": "laboral/comunidad-valenciana/alicante/pilar-de-la-horadada",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Castellón": {
+                "path": "laboral/comunidad-valenciana/castellon",
+                "has_calendar": false,
+                "children": {
+                    "Almazora/Almassora": {
+                        "path": "laboral/comunidad-valenciana/castellon/almazora-almassora",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Benicarló": {
+                        "path": "laboral/comunidad-valenciana/castellon/benicarlo",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Borriana/Burriana": {
+                        "path": "laboral/comunidad-valenciana/castellon/borriana-burriana",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Castellón de la Plana/Castelló de la Plana": {
+                        "path": "laboral/comunidad-valenciana/castellon/castellon-de-la-plana-castello-de-la-plana",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Nules": {
+                        "path": "laboral/comunidad-valenciana/castellon/nules",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Onda": {
+                        "path": "laboral/comunidad-valenciana/castellon/onda",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "la Vall d'Uixó": {
+                        "path": "laboral/comunidad-valenciana/castellon/la-vall-duixo",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Vila-real": {
+                        "path": "laboral/comunidad-valenciana/castellon/vila-real",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Vinaròs": {
+                        "path": "laboral/comunidad-valenciana/castellon/vinaros",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Valencia": {
+                "path": "laboral/comunidad-valenciana/valencia",
+                "has_calendar": false,
+                "children": {
+                    "Gandia": {
+                        "path": "laboral/comunidad-valenciana/valencia/gandia",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Valencia": {
+                        "path": "laboral/comunidad-valenciana/valencia/valencia",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "Extremadura": {
+        "path": "laboral/extremadura",
+        "has_calendar": true,
+        "children": {
+            "Badajoz": {
+                "path": "laboral/extremadura/badajoz",
+                "has_calendar": false,
+                "children": {
+                    "Almendralejo": {
+                        "path": "laboral/extremadura/badajoz/almendralejo",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Badajoz": {
+                        "path": "laboral/extremadura/badajoz/badajoz",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Don Benito": {
+                        "path": "laboral/extremadura/badajoz/don-benito",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Fuente del Maestre": {
+                        "path": "laboral/extremadura/badajoz/fuente-del-maestre",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Mérida": {
+                        "path": "laboral/extremadura/badajoz/merida",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Villafranca de los Barros": {
+                        "path": "laboral/extremadura/badajoz/villafranca-de-los-barros",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Villanueva de la Serena": {
+                        "path": "laboral/extremadura/badajoz/villanueva-de-la-serena",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Cáceres": {
+                "path": "laboral/extremadura/caceres",
+                "has_calendar": false,
+                "children": {
+                    "Cáceres": {
+                        "path": "laboral/extremadura/caceres/caceres",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Plasencia": {
+                        "path": "laboral/extremadura/caceres/plasencia",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "Galicia": {
+        "path": "laboral/galicia",
+        "has_calendar": true,
+        "children": {
+            "La Coruña": {
+                "path": "laboral/galicia/a-coruna",
+                "has_calendar": false,
+                "children": {
+                    "Ames": {
+                        "path": "laboral/galicia/a-coruna/ames",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Arteixo": {
+                        "path": "laboral/galicia/a-coruna/arteixo",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Cambre": {
+                        "path": "laboral/galicia/a-coruna/cambre",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Carballo": {
+                        "path": "laboral/galicia/a-coruna/carballo",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "A Coruña": {
+                        "path": "laboral/galicia/a-coruna/a-coruna",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Culleredo": {
+                        "path": "laboral/galicia/a-coruna/culleredo",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Ferrol": {
+                        "path": "laboral/galicia/a-coruna/ferrol",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Narón": {
+                        "path": "laboral/galicia/a-coruna/naron",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Oleiros": {
+                        "path": "laboral/galicia/a-coruna/oleiros",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "As Pontes de García Rodríguez": {
+                        "path": "laboral/galicia/a-coruna/as-pontes-de-garcia-rodriguez",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Ribeira": {
+                        "path": "laboral/galicia/a-coruna/ribeira",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Santiago de Compostela": {
+                        "path": "laboral/galicia/a-coruna/santiago-de-compostela",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Lugo": {
+                "path": "laboral/galicia/lugo",
+                "has_calendar": false,
+                "children": {
+                    "Lugo": {
+                        "path": "laboral/galicia/lugo/lugo",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Ourense": {
+                "path": "laboral/galicia/ourense",
+                "has_calendar": false,
+                "children": {
+                    "Ourense": {
+                        "path": "laboral/galicia/ourense/ourense",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Pontevedra": {
+                "path": "laboral/galicia/pontevedra",
+                "has_calendar": false,
+                "children": {
+                    "Cangas": {
+                        "path": "laboral/galicia/pontevedra/cangas",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "A Estrada": {
+                        "path": "laboral/galicia/pontevedra/a-estrada",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Lalín": {
+                        "path": "laboral/galicia/pontevedra/lalin",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Marín": {
+                        "path": "laboral/galicia/pontevedra/marin",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Pontevedra": {
+                        "path": "laboral/galicia/pontevedra/pontevedra",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Ponteareas": {
+                        "path": "laboral/galicia/pontevedra/ponteareas",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Redondela": {
+                        "path": "laboral/galicia/pontevedra/redondela",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sanxenxo": {
+                        "path": "laboral/galicia/pontevedra/sanxenxo",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Vigo": {
+                        "path": "laboral/galicia/pontevedra/vigo",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Vilagarcía de Arousa": {
+                        "path": "laboral/galicia/pontevedra/vilagarcia-de-arousa",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "Comunidad de Madrid": {
+        "path": "laboral/comunidad-de-madrid",
+        "has_calendar": true,
+        "children": {
+            "Madrid": {
+                "path": "laboral/comunidad-de-madrid/madrid",
+                "has_calendar": false,
+                "children": {
+                    "Alcalá de Henares": {
+                        "path": "laboral/comunidad-de-madrid/madrid/alcala-de-henares",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Alcobendas": {
+                        "path": "laboral/comunidad-de-madrid/madrid/alcobendas",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Alcorcón": {
+                        "path": "laboral/comunidad-de-madrid/madrid/alcorcon",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Algete": {
+                        "path": "laboral/comunidad-de-madrid/madrid/algete",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Aranjuez": {
+                        "path": "laboral/comunidad-de-madrid/madrid/aranjuez",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Arganda del Rey": {
+                        "path": "laboral/comunidad-de-madrid/madrid/arganda-del-rey",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Arroyomolinos": {
+                        "path": "laboral/comunidad-de-madrid/madrid/arroyomolinos",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Boadilla del Monte": {
+                        "path": "laboral/comunidad-de-madrid/madrid/boadilla-del-monte",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Ciempozuelos": {
+                        "path": "laboral/comunidad-de-madrid/madrid/ciempozuelos",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Colmenar Viejo": {
+                        "path": "laboral/comunidad-de-madrid/madrid/colmenar-viejo",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Collado Villalba": {
+                        "path": "laboral/comunidad-de-madrid/madrid/collado-villalba",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Coslada": {
+                        "path": "laboral/comunidad-de-madrid/madrid/coslada",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Daganzo de Arriba": {
+                        "path": "laboral/comunidad-de-madrid/madrid/daganzo-de-arriba",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Fresno de Torote": {
+                        "path": "laboral/comunidad-de-madrid/madrid/fresno-de-torote",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Fuenlabrada": {
+                        "path": "laboral/comunidad-de-madrid/madrid/fuenlabrada",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Galapagar": {
+                        "path": "laboral/comunidad-de-madrid/madrid/galapagar",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Getafe": {
+                        "path": "laboral/comunidad-de-madrid/madrid/getafe",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Leganés": {
+                        "path": "laboral/comunidad-de-madrid/madrid/leganes",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Madrid": {
+                        "path": "laboral/comunidad-de-madrid/madrid/madrid",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Majadahonda": {
+                        "path": "laboral/comunidad-de-madrid/madrid/majadahonda",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Mejorada del Campo": {
+                        "path": "laboral/comunidad-de-madrid/madrid/mejorada-del-campo",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Móstoles": {
+                        "path": "laboral/comunidad-de-madrid/madrid/mostoles",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Navalcarnero": {
+                        "path": "laboral/comunidad-de-madrid/madrid/navalcarnero",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Paracuellos de Jarama": {
+                        "path": "laboral/comunidad-de-madrid/madrid/paracuellos-de-jarama",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Parla": {
+                        "path": "laboral/comunidad-de-madrid/madrid/parla",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Pinto": {
+                        "path": "laboral/comunidad-de-madrid/madrid/pinto",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Pozuelo de Alarcón": {
+                        "path": "laboral/comunidad-de-madrid/madrid/pozuelo-de-alarcon",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Rascafría": {
+                        "path": "laboral/comunidad-de-madrid/madrid/rascafria",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Rivas-Vaciamadrid": {
+                        "path": "laboral/comunidad-de-madrid/madrid/rivas-vaciamadrid",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Las Rozas de Madrid": {
+                        "path": "laboral/comunidad-de-madrid/madrid/las-rozas-de-madrid",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "San Fernando de Henares": {
+                        "path": "laboral/comunidad-de-madrid/madrid/san-fernando-de-henares",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "San Sebastián de los Reyes": {
+                        "path": "laboral/comunidad-de-madrid/madrid/san-sebastian-de-los-reyes",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Talamanca de Jarama": {
+                        "path": "laboral/comunidad-de-madrid/madrid/talamanca-de-jarama",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Torrejón de Ardoz": {
+                        "path": "laboral/comunidad-de-madrid/madrid/torrejon-de-ardoz",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Torrelodones": {
+                        "path": "laboral/comunidad-de-madrid/madrid/torrelodones",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Valdemoro": {
+                        "path": "laboral/comunidad-de-madrid/madrid/valdemoro",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Villaviciosa de Odón": {
+                        "path": "laboral/comunidad-de-madrid/madrid/villaviciosa-de-odon",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Tres Cantos": {
+                        "path": "laboral/comunidad-de-madrid/madrid/tres-cantos",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "Región de Murcia": {
+        "path": "laboral/region-de-murcia",
+        "has_calendar": true,
+        "children": {
+            "Murcia": {
+                "path": "laboral/region-de-murcia/murcia",
+                "has_calendar": false,
+                "children": {
+                    "Águilas": {
+                        "path": "laboral/region-de-murcia/murcia/aguilas",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Alcantarilla": {
+                        "path": "laboral/region-de-murcia/murcia/alcantarilla",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Alhama de Murcia": {
+                        "path": "laboral/region-de-murcia/murcia/alhama-de-murcia",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Caravaca de la Cruz": {
+                        "path": "laboral/region-de-murcia/murcia/caravaca-de-la-cruz",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Cartagena": {
+                        "path": "laboral/region-de-murcia/murcia/cartagena",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Cieza": {
+                        "path": "laboral/region-de-murcia/murcia/cieza",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Jumilla": {
+                        "path": "laboral/region-de-murcia/murcia/jumilla",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Lorca": {
+                        "path": "laboral/region-de-murcia/murcia/lorca",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Mazarrón": {
+                        "path": "laboral/region-de-murcia/murcia/mazarron",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Molina de Segura": {
+                        "path": "laboral/region-de-murcia/murcia/molina-de-segura",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Murcia": {
+                        "path": "laboral/region-de-murcia/murcia/murcia",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "San Javier": {
+                        "path": "laboral/region-de-murcia/murcia/san-javier",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "San Pedro del Pinatar": {
+                        "path": "laboral/region-de-murcia/murcia/san-pedro-del-pinatar",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Torre-Pacheco": {
+                        "path": "laboral/region-de-murcia/murcia/torre-pacheco",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Las Torres de Cotillas": {
+                        "path": "laboral/region-de-murcia/murcia/las-torres-de-cotillas",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Totana": {
+                        "path": "laboral/region-de-murcia/murcia/totana",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Yecla": {
+                        "path": "laboral/region-de-murcia/murcia/yecla",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "Comunidad Foral de Navarra": {
+        "path": "laboral/comunidad-foral-de-navarra",
+        "has_calendar": true,
+        "children": {
+            "Navarra": {
+                "path": "laboral/comunidad-foral-de-navarra/navarra",
+                "has_calendar": false,
+                "children": {
+                    "Pamplona/Iruña": {
+                        "path": "laboral/comunidad-foral-de-navarra/navarra/pamplona-irunya",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Tudela": {
+                        "path": "laboral/comunidad-foral-de-navarra/navarra/tudela",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Barañain": {
+                        "path": "laboral/comunidad-foral-de-navarra/navarra/baranyain",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "País Vasco": {
+        "path": "laboral/pais-vasco",
+        "has_calendar": true,
+        "children": {
+            "Álava": {
+                "path": "laboral/pais-vasco/alava",
+                "has_calendar": false,
+                "children": {
+                    "Vitoria-Gasteiz": {
+                        "path": "laboral/pais-vasco/alava/vitoria-gasteiz",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Gipuzkoa": {
+                "path": "laboral/pais-vasco/gipuzkoa",
+                "has_calendar": false,
+                "children": {
+                    "Eibar": {
+                        "path": "laboral/pais-vasco/gipuzkoa/eibar",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Irun": {
+                        "path": "laboral/pais-vasco/gipuzkoa/irun",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Arrasate/Mondragón": {
+                        "path": "laboral/pais-vasco/gipuzkoa/arrasate-mondragon",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Errenteria": {
+                        "path": "laboral/pais-vasco/gipuzkoa/errenteria",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Donostia-San Sebastián": {
+                        "path": "laboral/pais-vasco/gipuzkoa/donostia-san-sebastian",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Zarautz": {
+                        "path": "laboral/pais-vasco/gipuzkoa/zarautz",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            },
+            "Bizkaia": {
+                "path": "laboral/pais-vasco/bizkaia",
+                "has_calendar": false,
+                "children": {
+                    "Barakaldo": {
+                        "path": "laboral/pais-vasco/bizkaia/barakaldo",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Basauri": {
+                        "path": "laboral/pais-vasco/bizkaia/basauri",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Bilbao": {
+                        "path": "laboral/pais-vasco/bizkaia/bilbao",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Durango": {
+                        "path": "laboral/pais-vasco/bizkaia/durango",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Galdakao": {
+                        "path": "laboral/pais-vasco/bizkaia/galdakao",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Getxo": {
+                        "path": "laboral/pais-vasco/bizkaia/getxo",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Leioa": {
+                        "path": "laboral/pais-vasco/bizkaia/leioa",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Portugalete": {
+                        "path": "laboral/pais-vasco/bizkaia/portugalete",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Santurtzi": {
+                        "path": "laboral/pais-vasco/bizkaia/santurtzi",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Sestao": {
+                        "path": "laboral/pais-vasco/bizkaia/sestao",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Erandio": {
+                        "path": "laboral/pais-vasco/bizkaia/erandio",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "La Rioja": {
+        "path": "laboral/la-rioja",
+        "has_calendar": true,
+        "children": {
+            "La Rioja": {
+                "path": "laboral/la-rioja/la-rioja",
+                "has_calendar": false,
+                "children": {
+                    "Calahorra": {
+                        "path": "laboral/la-rioja/la-rioja/calahorra",
+                        "has_calendar": true,
+                        "children": {}
+                    },
+                    "Logroño": {
+                        "path": "laboral/la-rioja/la-rioja/logronyo",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "Ceuta": {
+        "path": "laboral/ceuta",
+        "has_calendar": true,
+        "children": {
+            "Ceuta": {
+                "path": "laboral/ceuta/ceuta",
+                "has_calendar": false,
+                "children": {
+                    "Ceuta": {
+                        "path": "laboral/ceuta/ceuta/ceuta",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    },
+    "Melilla": {
+        "path": "laboral/melilla",
+        "has_calendar": true,
+        "children": {
+            "Melilla": {
+                "path": "laboral/melilla/melilla",
+                "has_calendar": false,
+                "children": {
+                    "Melilla": {
+                        "path": "laboral/melilla/melilla/melilla",
+                        "has_calendar": true,
+                        "children": {}
+                    }
+                }
+            }
+        }
+    }
+}
