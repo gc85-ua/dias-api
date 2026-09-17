@@ -1,5 +1,6 @@
 from fastapi import APIRouter
-from app.api.v1.endpoints import laborables, festivos
+
+from app.api.v1.endpoints import festivos, laborables
 
 router = APIRouter()
 router.include_router(laborables.endpoint, tags=["laborables"], prefix="/laborables")

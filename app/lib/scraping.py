@@ -1,31 +1,35 @@
-import re
-import requests
 import logging
-from bs4 import BeautifulSoup
+import re
 from datetime import date
-from typing import Optional, Any, Dict
+from typing import Any
+
+import requests
+from bs4 import BeautifulSoup
 
 from app.core.config import DATA_DIR
-from app.lib.exceptions import ParsingException, ScrapingException
+from app.exceptions import ParsingException, ScrapingException
+from app.lib.constants.dictionaries import CAPITALIZED_MONTHS
 from app.lib.utils import (
     export_to_json,
-    import_from_json,
     get_property_values_from_leaves,
+    import_from_json,
 )
-from app.lib.constants.dictionaries import CAPITALIZED_MONTHS
 from app.schemas.scraping import Holiday, HolidayType, ScrapedHolidaysDetail
 
+logger = logging.getLogger(__name__)
 
 def try_get(
     url: str, retries: int = 3, timeout: int = 5
-) -> Optional[requests.Response]:
+) -> requests.Response | None:
     for attempt in range(retries):
         try:
             response = requests.get(url, timeout=timeout)
             response.raise_for_status()
             return response
         except requests.RequestException as e:
-            raise ScrapingException(f"Error fetching data from {url}: {e}")
+            logger.warning(
+                "Url fetching has failed", extra={"url": url, "attempt": attempt + 1, "error": str(e)}
+            )
     return None
 
 
@@ -35,14 +39,14 @@ def get_subpaths_dict_from(
     with_position: int,
     with_pattern: str,
     base_url: str,
-) -> Dict[str, str]:
+) -> dict[str, str]:
     url = f"{base_url}{path}"
     response = None
     path_dicts = {}
 
     response = try_get(url)
     if response is None:
-        logging.error(f"Failed to fetch data from URL {url}")
+        logger.error(f"Failed to fetch data from URL {url}")
         raise ScrapingException("Error fetching data from external source: {url}")
 
     soup = BeautifulSoup(response.text, "html.parser")
@@ -81,7 +85,7 @@ class CalendariosIdealScraper:
 
     def __new__(cls, *args, **kwargs):
         if cls._instance is None:
-            cls._instance = super(CalendariosIdealScraper, cls).__new__(cls)
+            cls._instance = super().__new__(cls)
         return cls._instance
 
     def __init__(self, sitemap_filename: str = "sitemap.json"):
@@ -108,14 +112,13 @@ class CalendariosIdealScraper:
         self.__sitemap = get_property_values_from_leaves(
             sitemap_nested_dict, "children", "path"
         )
-        return
 
     @property
-    def sitemap(self) -> Dict[str, str]:
+    def sitemap(self) -> dict[str, str]:
         return self.__sitemap
 
     @classmethod
-    def get_nested_sitemap_dict(cls) -> Dict[str, Any]:
+    def get_nested_sitemap_dict(cls) -> dict[str, Any]:
         sitemap_dict = {}
         ccaa_dict = get_subpaths_dict_from(
             base_url=cls.BASE_URL,
@@ -161,7 +164,7 @@ class CalendariosIdealScraper:
 
         response = try_get(url)
         if response is None:
-            raise Exception("Error fetching data from external source")
+            raise ScrapingException(f"Error fetching data from external source: {url}")
 
         soup = BeautifulSoup(response.text, "html.parser")
 
@@ -171,7 +174,7 @@ class CalendariosIdealScraper:
             month_name = month.find(class_="bm-calendar-month-title").text.strip()
             month_id = CAPITALIZED_MONTHS.get(month_name)
             if month_id is None:
-                raise ValueError(f"Unknown month name: {month_name}")
+                raise ParsingException(f"Unexpected month name: {month_name}")
 
             holidays_nacional = month.find_all(
                 "td", class_="bm-calendar-state-nacional"
@@ -207,9 +210,12 @@ class CalendariosIdealScraper:
                     for h in holidays_local
                 ]
             )
-
+        logger.debug(
+            "Scraped holidays data fields",
+            extra={"path": path, "year": year, "data_length": len(holidays)},
+        )
         return ScrapedHolidaysDetail(
             year=year,
             source=url,
-            data=sorted(holidays, key=lambda h: h.date) if holidays else None
+            data=sorted(holidays, key=lambda holiday: holiday.date) if holidays else []
         )

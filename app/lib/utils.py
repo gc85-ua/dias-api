@@ -1,8 +1,10 @@
 import json
+import logging
 from difflib import SequenceMatcher
 from os import path
 from typing import Any
 
+logger = logging.getLogger(__name__)
 
 def export_to_json(data: dict, filename: str, overwrite: bool = False) -> None:
     if not overwrite and path.exists(filename):
@@ -49,7 +51,7 @@ def fuzzy_match_from_dict(
     term: str, dictionary: dict[str, Any], threshold: float = 0.6
 ) -> dict[str, Any]:
 
-    result = {"best_match": None, "best_match_value": None, "highest_similarity": 0.0}
+    result = {"best_match_key": None, "best_match_value": None, "highest_similarity": 0.0}
 
     for key, value in dictionary.items():
         similarity = calculate_similarity(term, key)
@@ -63,11 +65,28 @@ def fuzzy_match_from_dict(
 
         if similarity > result["highest_similarity"]:
             result["highest_similarity"] = similarity
-            result["best_match"] = key
+            result["best_match_key"] = key
             result["best_match_value"] = value
-
+    logger.debug(
+        "Fuzzy match result",
+        extra={
+            "term": term,
+            "best_match_key": result["best_match_key"],
+            "best_match_value": result["best_match_value"],
+            "highest_similarity": result["highest_similarity"],
+        },
+    )
     if result["highest_similarity"] < threshold:
         # if the threshold is not met, value is considered not found, but we leave the best match for reference
+        logger.warning(
+            "Fuzzy match below threshold, value will be set to None",
+            extra={
+                "term": term,
+                "best_match_key": result["best_match_key"],
+                "highest_similarity": result["highest_similarity"],
+                "threshold": threshold,
+            },
+        )
         result["best_match_value"] = None
 
     return result

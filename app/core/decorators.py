@@ -1,13 +1,16 @@
 import functools
 import inspect
 import json
-from typing import Callable, Optional, List
+import logging
+from collections.abc import Callable
 
 from pydantic import BaseModel
+
 from app.database.cache import cache_client
 
+logger = logging.getLogger(__name__)
 
-def cached_operation(ttl, cache_prefix: str = "default", cache_key_params: Optional[List[str]] = None, expected_model: Optional[BaseModel] = None):
+def cached_operation(ttl, cache_prefix: str = "default", cache_key_params: list[str] | None = None, expected_model: BaseModel | None = None):
     def decorator(func: Callable) -> Callable:
         sig:inspect.Signature = inspect.signature(func)
         param_names = sig.parameters.keys()
@@ -18,7 +21,8 @@ def cached_operation(ttl, cache_prefix: str = "default", cache_key_params: Optio
                 bound.apply_defaults()
                 params = bound.arguments
             except Exception as e:
-                raise ValueError(f"Error binding parameters for function {func.__name__}: {e}")
+                logger.error("Error binding parameters for function", extra={"function": func.__name__, "error": str(e)})
+                raise
             
             params = {k: v for k,v in params.items() if k not in ['self', 'cls']}
 
@@ -32,11 +36,13 @@ def cached_operation(ttl, cache_prefix: str = "default", cache_key_params: Optio
             try:
                 cached_result = cache_client.get_cache(key=cache_key)
                 if cached_result is not None:
+                    logger.debug("Cache hit for key", extra={"key": cache_key,"value_size_bytes": len(cached_result) if isinstance(cached_result, (str, bytes)) else 'N/A'})
                     if expected_model:
                         return _deserialize(cached_result, expected_model)
                     return cached_result
             except Exception as e:
-                print(f"Error retrieving cache for key {cache_key}: {e}")
+                logger.error("Error retrieving cache for key", extra={"key": cache_key, "error": str(e)})
+                raise
 
             result = func(*args, **kwargs) 
 
@@ -51,7 +57,7 @@ def cached_operation(ttl, cache_prefix: str = "default", cache_key_params: Optio
 def _serialize(result):
     if isinstance(result, BaseModel):
         return result.model_dump_json()
-    if isinstance(result, List[BaseModel]):
+    if isinstance(result, list[BaseModel]):
         return json.dumps([part.model_dump_json() for part in result])
     if isinstance(result, (dict, list)):
         return json.dumps(result)

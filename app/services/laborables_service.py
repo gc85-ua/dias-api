@@ -1,6 +1,8 @@
 from datetime import date, timedelta
-from app.schemas.services import LaborablesResponse, Laborables
+
 from app.lib.scraping import CalendariosIdealScraper
+from app.schemas.scraping import ScrapedHolidaysDetail
+from app.schemas.services import Laborables, LaborablesResponse
 from app.services.internal.scraping_service import (
     get_holidays_detail,
     get_path_for_location,
@@ -26,13 +28,17 @@ def calculate_working_days(year: int, holidays: list[date]) -> Laborables:
 def get_laborables(
     year: int,
     location: str,
-    scraper: CalendariosIdealScraper = CalendariosIdealScraper(),
+    scraper: CalendariosIdealScraper | None = None,
 ) -> LaborablesResponse:
+    
+    if scraper is None:
+        scraper = CalendariosIdealScraper()
+    
     path, matched_location = get_path_for_location(location, scraper)
-
-    scraped_holidays = get_holidays_detail(path, year, scraper)
+    
+    scraped_holidays:ScrapedHolidaysDetail = get_holidays_detail(path, year, scraper)
+        
     holidays_dates = [holiday.date for holiday in scraped_holidays.data]
-
 
     return LaborablesResponse(
         laborables=calculate_working_days(year, holidays_dates),

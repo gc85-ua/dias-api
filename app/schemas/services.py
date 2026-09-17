@@ -1,9 +1,10 @@
 from datetime import date
 
-from pydantic import AliasChoices, BaseModel, HttpUrl, Field, ConfigDict
-from typing import List
+from pydantic import AliasChoices, BaseModel, ConfigDict, Field, HttpUrl
+
+
 class Locations(BaseModel):
-    locations: List[str]
+    locations: list[str]
 
 class Laborables(BaseModel):
     enero: int = Field(..., validation_alias=AliasChoices("1","enero", "January"))
@@ -35,4 +36,4 @@ class Festivo(BaseModel):
     tipo: str = Field(..., validation_alias=AliasChoices("type", "tipo"))
 
 class FestivosResponse(ServiceResponse):
-    festivos: List[Festivo]
+    festivos: list[Festivo]

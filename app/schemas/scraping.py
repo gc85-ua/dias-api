@@ -1,8 +1,8 @@
+from datetime import date
 from enum import Enum
 
 from pydantic import BaseModel, HttpUrl
-from datetime import date
-from typing import List, Optional
+
 
 class HolidayType(str,Enum):
     nacional = "nacional"
@@ -16,7 +16,7 @@ class Holiday(BaseModel):
 
 class Scraped(BaseModel):
     year: int
-    source: Optional[HttpUrl] = None
+    source: HttpUrl | None = None
 
 class ScrapedHolidaysDetail(Scraped):
-    data: Optional[List[Holiday]] = None
+    data: list[Holiday] = []

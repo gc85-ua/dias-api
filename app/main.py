@@ -2,7 +2,9 @@ from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 
 from app.api.v1 import router
+from app.core.logging_config import configure_logging
 
+configure_logging()
 
 app = FastAPI(
     title="API de Dias Laborables y Festivos en España",
