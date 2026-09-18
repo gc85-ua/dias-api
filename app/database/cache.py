@@ -30,9 +30,10 @@ class CacheDAO:
         operation_success = False
         try:
             client.set(key, value, ex=ttl)
+            operation_success = True
         except valkey.ValkeyError as e:
             logger.error("Error occurred while setting cache", extra={"key": key, "error": str(e)})
-            operation_success = False
+            
         return operation_success
     
     def _get(self, client: valkey.Valkey, key: str) -> dict | str | float | None:
