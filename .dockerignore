@@ -1,0 +1,104 @@
+# ==========================================
+# 1. Virtual Environments (CRITICAL)
+# ==========================================
+# Never copy local virtual environments. They contain OS/architecture-specific 
+# compiled binaries. Copying a macOS/Windows venv into a Linux container will break it.
+.venv/
+venv/
+ENV/
+env/
+
+# ==========================================
+# 2. Version Control & Git
+# ==========================================
+# Git history is huge and unnecessary for the runtime image.
+# It also prevents accidental leakage of .git/config which might contain credentials.
+.git/
+.gitignore
+
+# ==========================================
+# 3. Python Caches & Artifacts
+# ==========================================
+# Stale bytecode and cache directories. They bloat the image and cause 
+# weird caching issues if the host OS differs from the container OS.
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.hypothesis/
+coverage.xml
+*.cover
+htmlcov/
+
+# ==========================================
+# 4. Environment & Secrets (SECURITY)
+# ==========================================
+# NEVER bake local environment variables or secrets into the Docker image.
+# These should be injected at runtime via docker-compose, Kubernetes secrets, etc.
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# 5. IDE & Editor Configs
+# ==========================================
+# Local developer settings have no place in a production container.
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+
+# ==========================================
+# 6. Docker & CI/CD Files
+# ==========================================
+# Prevent recursive copying of Docker files and exclude CI pipelines 
+# which aren't needed inside the final image.
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+.github/
+.gitlab-ci.yml
+.circleci/
+
+# ==========================================
+# 7. Documentation & Non-Code Assets
+# ==========================================
+# Unless your FastAPI app serves static docs directly from these folders, 
+# exclude them to save space.
+docs/
+README.md
+LICENSE
+CHANGELOG.md
+mkdocs.yml
+*.md
+
+# ==========================================
+# 8. OS Specific Files
+# ==========================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ==========================================
+# 9. Tests (Optional but recommended for prod)
+# ==========================================
+# If you want the absolute smallest production image, exclude tests.
+# Note: If you run tests *inside* Docker, remove this block.
+tests/
+test/
+
+# ==========================================
+# 10. coding agents
+# ==========================================
+.opencode/
+.claude/
+.copilot/
+.gemini/
+.codex/
