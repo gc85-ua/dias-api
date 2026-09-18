@@ -3,10 +3,17 @@ import logging
 from datetime import UTC, datetime
 from typing import Any, ClassVar
 
+from app.core.config import settings
+
 try:
     from opentelemetry import trace
 except ImportError:
     trace = None
+
+try:
+    from opentelemetry.sdk._logs import LoggingHandler as OtelLoggingHandler
+except ImportError:
+    LoggingHandler = None
 
 
 # Filter: Captures trace context immediately at log time (Thread & Queue safe)
@@ -59,14 +66,22 @@ class OtelJsonFormatter(logging.Formatter):
 
         return json.dumps(payload, default=str)
     
-def configure_logging(level: int = logging.DEBUG) -> None:
+def configure_logging(level : int | None = None) -> None:
+    if level is None:
+        level = getattr(logging, settings.log_level.upper())
+
     handler = logging.StreamHandler()
     handler.addFilter(OtelContextFilter())
     handler.setFormatter(OtelJsonFormatter())
 
+    handlers = [handler]
+
+    if OtelLoggingHandler is not None:
+        handlers.append(OtelLoggingHandler())
+
     root_logger = logging.getLogger()
     root_logger.setLevel(level)
-    root_logger.handlers = [handler]
+    root_logger.handlers = handlers
 
     for uvicorn_logger_name in ("uvicorn", "uvicorn.access", "uvicorn.error"):
         uvicorn_logger = logging.getLogger(uvicorn_logger_name)

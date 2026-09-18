@@ -14,5 +14,6 @@ class Settings(BaseSettings):
     cache_db_host: str = 'localhost' # redis/valkey host
     cache_db_port: int = 6379 # redis/valkey port
     cache_db: int = 0 # redis/valkey database number
+    log_level: str = "INFO" # Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
 
 settings = Settings()
