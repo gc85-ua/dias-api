@@ -70,6 +70,7 @@ def fuzzy_match_from_dict(
     logger.debug(
         "Fuzzy match result",
         extra={
+            "event_name": "location.match_result",
             "term": term,
             "best_match_key": result["best_match_key"],
             "best_match_value": result["best_match_value"],
@@ -81,6 +82,7 @@ def fuzzy_match_from_dict(
         logger.warning(
             "Fuzzy match below threshold, value will be set to None",
             extra={
+                "event_name": "location.match_below_threshold",
                 "term": term,
                 "best_match_key": result["best_match_key"],
                 "highest_similarity": result["highest_similarity"],

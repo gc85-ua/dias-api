@@ -1,5 +1,3 @@
-import logging
-
 from app.lib.scraping import CalendariosIdealScraper
 from app.schemas.scraping import ScrapedHolidaysDetail
 from app.schemas.services import Festivo, FestivosResponse
@@ -7,8 +5,6 @@ from app.services.internal.scraping_service import (
     get_holidays_detail,
     get_path_for_location,
 )
-
-logger = logging.getLogger(__name__)
 
 def get_festivos(
     year: int,

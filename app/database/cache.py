@@ -14,11 +14,8 @@ class CacheDAO:
         try:
             self.client_connection = valkey.Valkey(host=host, port=port, db=settings.cache_db)
         except valkey.ValkeyError as e:
-            logger.error("Error occurred while connecting to cache", extra={"error": str(e)})
-            self.client_connection = None # Set client to None if connection failss
-
-    # set and get operations are abstrated from the client connection to allow for easier db separation in the future if needed.
-    # This also makes testing and mocking easier.
+            logger.error("Error occurred while connecting to cache", extra={"event_name": "cache.connection_error", "error": str(e)})
+            self.client_connection = None
 
     def _set(
         self,
@@ -27,15 +24,13 @@ class CacheDAO:
         value: dict | str | float,
         ttl: int,
     ) -> bool:
-        operation_success = False
         try:
             client.set(key, value, ex=ttl)
-            operation_success = True
+            return True
         except valkey.ValkeyError as e:
-            logger.error("Error occurred while setting cache", extra={"key": key, "error": str(e)})
-            
-        return operation_success
-    
+            logger.error("Error occurred while setting cache", extra={"event_name": "cache.set_error", "key": key, "error": str(e)})
+            return False
+
     def _get(self, client: valkey.Valkey, key: str) -> dict | str | float | None:
         value = None
         try:
@@ -43,19 +38,19 @@ class CacheDAO:
             if value is not None:
                 return value
         except valkey.ValkeyError as e:
-            logger.error("Error occurred while getting cache", extra={"key": key, "error": str(e)})
+            logger.error("Error occurred while getting cache", extra={"event_name": "cache.get_error", "key": key, "error": str(e)})
 
         return value
 
     def set_cache(self, key: str, value: dict | str | float, ttl: int = 86400) -> bool:
         if self.client_connection is None:
-            logger.error("Cache client connection is not initialized")
+            logger.error("Cache client connection is not initialized", extra={"event_name": "cache.not_initialized"})
             return False
         return self._set(self.client_connection, key, value, ttl)
 
     def get_cache(self, key: str) -> dict | str | float | None:
         if self.client_connection is None:
-            logger.error("Cache client connection is not initialized")
+            logger.error("Cache client connection is not initialized", extra={"event_name": "cache.not_initialized"})
             return None
         return self._get(self.client_connection, key)
 

@@ -7,7 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from app.core.config import DATA_DIR
-from app.exceptions import ParsingException, ScrapingException
+from app.exceptions import ParsingError, ScrapingError
 from app.lib.constants.dictionaries import CAPITALIZED_MONTHS
 from app.lib.utils import (
     export_to_json,
@@ -28,7 +28,8 @@ def try_get(
             return response
         except requests.RequestException as e:
             logger.warning(
-                "Url fetching has failed", extra={"url": url, "attempt": attempt + 1, "error": str(e)}
+                "Url fetching has failed",
+                extra={"event_name": "http.request_failed", "url": url, "attempt": attempt + 1, "error": str(e)},
             )
     return None
 
@@ -46,21 +47,22 @@ def get_subpaths_dict_from(
 
     response = try_get(url)
     if response is None:
-        logger.error(f"Failed to fetch data from URL {url}")
-        raise ScrapingException("Error fetching data from external source: {url}")
+        raise ScrapingError("Error fetching data from external source", url=url)
 
     soup = BeautifulSoup(response.text, "html.parser")
     lists = soup.select(with_selector)
 
     if lists is None or len(lists) == 0:
-        raise ParsingException(
-            f"Failed to find any element with selector {with_selector} in url {url}"
+        raise ParsingError(
+            f"Failed to find any element with selector {with_selector}",
+            context={"url": url, "selector": with_selector},
         )
 
     items = lists[0].find_all("a")
     if not items or len(items) == 0:
-        raise ParsingException(
-            f"Failed to find any 'a' element with selector {with_selector} in url {url}"
+        raise ParsingError(
+            f"Failed to find any 'a' element with selector {with_selector}",
+            context={"url": url, "selector": with_selector},
         )
 
     pattern = re.compile(with_pattern)
@@ -164,8 +166,22 @@ class CalendariosIdealScraper:
 
         response = try_get(url)
         if response is None:
-            raise ScrapingException(f"Error fetching data from external source: {url}")
-
+            raise ScrapingError("Error fetching data from external source", url=url)
+        if response.status_code == 404:
+            raise ScrapingError(
+                f"Data not found for path {path} and year {year}",
+                category="not_found",
+                url=url,
+                context={"path": path, "year": year},
+                safe_message="The requested data was not found.",
+            )
+        if response.status_code != 200:
+            raise ScrapingError(
+                f"Unexpected status code {response.status_code} when fetching data from external source",
+                url=url,
+                context={"received_status_code": response.status_code},
+                safe_message="An unexpected error occurred while fetching data.",
+            )
         soup = BeautifulSoup(response.text, "html.parser")
 
         months = soup.find_all("table", class_="bm-calendar")
@@ -174,7 +190,10 @@ class CalendariosIdealScraper:
             month_name = month.find(class_="bm-calendar-month-title").text.strip()
             month_id = CAPITALIZED_MONTHS.get(month_name)
             if month_id is None:
-                raise ParsingException(f"Unexpected month name: {month_name}")
+                raise ParsingError(
+                    f"Unexpected month name: {month_name}",
+                    context={"month_name": month_name, "path": path, "year": year},
+                )
 
             holidays_nacional = month.find_all(
                 "td", class_="bm-calendar-state-nacional"
@@ -212,7 +231,7 @@ class CalendariosIdealScraper:
             )
         logger.debug(
             "Scraped holidays data fields",
-            extra={"path": path, "year": year, "data_length": len(holidays)},
+            extra={"event_name": "scraping.data_scraped", "path": path, "year": year, "data_length": len(holidays)},
         )
         return ScrapedHolidaysDetail(
             year=year,

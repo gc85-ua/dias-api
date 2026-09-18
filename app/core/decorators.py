@@ -21,7 +21,7 @@ def cached_operation(ttl, cache_prefix: str = "default", cache_key_params: list[
                 bound.apply_defaults()
                 params = bound.arguments
             except Exception as e:
-                logger.error("Error binding parameters for function", extra={"function": func.__name__, "error": str(e)})
+                logger.error("Error binding parameters for function", extra={"event_name": "cache.param_bind_error", "function": func.__name__, "error": str(e)})
                 raise
             
             params = {k: v for k,v in params.items() if k not in ['self', 'cls']}
@@ -36,15 +36,20 @@ def cached_operation(ttl, cache_prefix: str = "default", cache_key_params: list[
             try:
                 cached_result = cache_client.get_cache(key=cache_key)
                 if cached_result is not None:
-                    logger.debug("Cache hit for key", extra={"key": cache_key,"value_size_bytes": len(cached_result) if isinstance(cached_result, (str, bytes)) else 'N/A'})
+                    logger.debug("Cache hit for key", extra={"event_name": "cache.hit", "key": cache_key,"value_size_bytes": len(cached_result) if isinstance(cached_result, (str, bytes)) else 'N/A'})
                     if expected_model:
                         return _deserialize(cached_result, expected_model)
                     return cached_result
             except Exception as e:
-                logger.error("Error retrieving cache for key", extra={"key": cache_key, "error": str(e)})
+                logger.error("Error retrieving cache for key", extra={"event_name": "cache.get_error", "key": cache_key, "error": str(e)})
                 raise
-
-            result = func(*args, **kwargs) 
+            
+            result = None
+            try:
+                result = func(*args, **kwargs)
+            except Exception as e:
+                logger.error("Error executing function", extra={"event_name": "cache.execute_error", "function": func.__name__, "error": str(e)})
+                raise
 
             cache_client.set_cache(key=cache_key, value=_serialize(result), ttl=ttl)
             
