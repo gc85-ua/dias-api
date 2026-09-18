@@ -73,14 +73,16 @@ class TestLaborablesEndpoint:
 
     @patch("app.api.v1.endpoints.laborables.gl")
     def test_get_laborables_not_found(self, mock_gl):
-        from app.exceptions import ResourceNotFoundException
-        mock_gl.side_effect = ResourceNotFoundException
+        from app.exceptions import LocationNotFoundError
+        mock_gl.side_effect = LocationNotFoundError("NonExistentCity")
 
         encoded = quote("NonExistentCity")
         response = client.get(f"/v1/laborables/?municipio={encoded}&año=2024")
 
         assert response.status_code == 404
-        assert response.json()["detail"] == "Resource not found"
+        data = response.json()
+        assert data["error_code"] == "LOCATION_NOT_FOUND"
+        assert data["message"] == "The requested location was not found."
 
 
 class TestFestivosEndpoint:
@@ -123,14 +125,16 @@ class TestFestivosEndpoint:
 
     @patch("app.api.v1.endpoints.festivos.gf")
     def test_get_festivos_not_found(self, mock_gf):
-        from app.exceptions import ResourceNotFoundException
-        mock_gf.side_effect = ResourceNotFoundException
+        from app.exceptions import LocationNotFoundError
+        mock_gf.side_effect = LocationNotFoundError("NonExistentCity")
 
         encoded = quote("NonExistentCity")
         response = client.get(f"/v1/festivos/?municipio={encoded}&año=2024")
 
         assert response.status_code == 404
-        assert response.json()["detail"] == "Resource not found"
+        data = response.json()
+        assert data["error_code"] == "LOCATION_NOT_FOUND"
+        assert data["message"] == "The requested location was not found."
 
     @patch("app.api.v1.endpoints.festivos.gf")
     def test_get_festivos_empty_list(self, mock_gf):
