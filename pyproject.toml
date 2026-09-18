@@ -32,8 +32,8 @@ dependencies = [
     "opentelemetry-instrumentation-urllib==0.65b0",
     "opentelemetry-instrumentation-urllib3==0.65b0",
     "opentelemetry-instrumentation-wsgi==0.65b0",
-    "redis>=8.0.1",
     "requests>=2.32.5",
+    "valkey>=6.1.1",
     "xlsxwriter>=3.2.9",
 ]
 
