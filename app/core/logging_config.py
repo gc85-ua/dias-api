@@ -4,6 +4,7 @@ from datetime import UTC, datetime
 from typing import Any, ClassVar
 
 from app.core.config import settings
+from app.core.middleware import request_id_var
 
 try:
     from opentelemetry import trace
@@ -23,6 +24,7 @@ class OtelContextFilter(logging.Filter):
         record.trace_id = None
         record.span_id = None
         record.trace_sampled = False
+        record.request_id = request_id_var.get(None) or getattr(record, "request_id", None)
 
         if trace:
             span = trace.get_current_span()
@@ -42,7 +44,7 @@ class OtelJsonFormatter(logging.Formatter):
         "funcName", "levelname", "levelno", "lineno", "module", "msecs",
         "message", "msg", "name", "pathname", "process", "processName",
         "relativeCreated", "stack_info", "thread", "threadName", "taskName",
-        "trace_id", "span_id", "trace_sampled"
+        "trace_id", "span_id", "trace_sampled", "request_id", "event_name",
     }
 
     def format(self, record: logging.LogRecord) -> str:
@@ -54,6 +56,8 @@ class OtelJsonFormatter(logging.Formatter):
             "trace_id": getattr(record, "trace_id", None),
             "span_id": getattr(record, "span_id", None),
             "trace_sampled": getattr(record, "trace_sampled", False),
+            "request_id": getattr(record, "request_id", None),
+            "event_name": getattr(record, "event_name", None),
         }
 
         if record.exc_info:
