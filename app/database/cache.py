@@ -1,6 +1,6 @@
 import logging
 
-import valkey
+import redis
 
 from app.core.config import Settings
 from app.core.config import settings as default_settings
@@ -12,14 +12,14 @@ class CacheDAO:
         host = settings.cache_db_host
         port = settings.cache_db_port
         try:
-            self.client_connection = valkey.Valkey(host=host, port=port, db=settings.cache_db)
-        except valkey.ValkeyError as e:
+            self.client_connection = redis.Redis(host=host, port=port, db=settings.cache_db)
+        except redis.RedisError as e:
             logger.error("Error occurred while connecting to cache", extra={"event_name": "cache.connection_error", "error": str(e)})
             self.client_connection = None
 
     def _set(
         self,
-        client: valkey.Valkey,
+        client: redis.Redis,
         key: str,
         value: dict | str | float,
         ttl: int,
@@ -27,17 +27,17 @@ class CacheDAO:
         try:
             client.set(key, value, ex=ttl)
             return True
-        except valkey.ValkeyError as e:
+        except redis.RedisError as e:
             logger.error("Error occurred while setting cache", extra={"event_name": "cache.set_error", "key": key, "error": str(e)})
             return False
 
-    def _get(self, client: valkey.Valkey, key: str) -> dict | str | float | None:
+    def _get(self, client: redis.Redis, key: str) -> dict | str | float | None:
         value = None
         try:
             value = client.get(key)
             if value is not None:
                 return value
-        except valkey.ValkeyError as e:
+        except redis.RedisError as e:
             logger.error("Error occurred while getting cache", extra={"event_name": "cache.get_error", "key": key, "error": str(e)})
 
         return value
