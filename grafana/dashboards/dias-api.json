@@ -12,7 +12,7 @@
       }
     ]
   },
-  "description": "Observability dashboard for Laborables API - FastAPI application with Redis cache and OpenTelemetry instrumentation",
+  "description": "Observability dashboard for dias API - FastAPI application with Redis cache and OpenTelemetry instrumentation",
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
@@ -31,14 +31,12 @@
       "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
       "fieldConfig": {
         "defaults": {
-          "color": { "mode": "thresholds" },
+          "color": { "mode": "fixed", "fixedColor": "blue" },
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
-              { "color": "green", "value": null },
-              { "color": "yellow", "value": 50 },
-              { "color": "red", "value": 100 }
+              { "color": "blue", "value": null }
             ]
           },
           "unit": "reqps"
@@ -64,7 +62,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
-          "expr": "sum(rate(http_server_duration_milliseconds_count{service_name=\"laborables-api\"}[5m]))",
+          "expr": "sum(rate(http_server_duration_milliseconds_count{service_name=\"dias-api\"}[5m]))",
           "legendFormat": "requests/s",
           "refId": "A"
         }
@@ -107,7 +105,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
-          "expr": "histogram_quantile(0.5, sum(rate(http_server_duration_milliseconds_bucket{service_name=\"laborables-api\"}[5m])) by (le))",
+          "expr": "histogram_quantile(0.5, sum(rate(http_server_duration_milliseconds_bucket{service_name=\"dias-api\"}[5m])) by (le))",
           "legendFormat": "p50",
           "refId": "A"
         }
@@ -150,7 +148,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
-          "expr": "histogram_quantile(0.99, sum(rate(http_server_duration_milliseconds_bucket{service_name=\"laborables-api\"}[5m])) by (le))",
+          "expr": "histogram_quantile(0.99, sum(rate(http_server_duration_milliseconds_bucket{service_name=\"dias-api\"}[5m])) by (le))",
           "legendFormat": "p99",
           "refId": "A"
         }
@@ -193,7 +191,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
-          "expr": "sum(rate(http_server_duration_milliseconds_count{service_name=\"laborables-api\", http_status_code=~\"5..\"}[5m])) / sum(rate(http_server_duration_milliseconds_count{service_name=\"laborables-api\"}[5m]))",
+          "expr": "sum(rate(http_server_duration_milliseconds_count{service_name=\"dias-api\", http_status_code=~\"5..\"}[5m])) / sum(rate(http_server_duration_milliseconds_count{service_name=\"dias-api\"}[5m])) or vector(0)",
           "legendFormat": "error rate",
           "refId": "A"
         }
@@ -236,7 +234,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
-          "expr": "http_server_active_requests{service_name=\"laborables-api\"}",
+          "expr": "sum(http_server_active_requests{service_name=\"dias-api\"})",
           "legendFormat": "active",
           "refId": "A"
         }
@@ -279,7 +277,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
-          "expr": "sum(rate(http_server_response_size_bytes_sum{service_name=\"laborables-api\"}[5m])) / sum(rate(http_server_response_size_bytes_count{service_name=\"laborables-api\"}[5m]))",
+          "expr": "sum(rate(http_server_response_size_bytes_sum{service_name=\"dias-api\"}[5m])) / sum(rate(http_server_response_size_bytes_count{service_name=\"dias-api\"}[5m]))",
           "legendFormat": "avg size",
           "refId": "A"
         }
@@ -331,14 +329,20 @@
         "legend": { "calcs": ["mean", "max"], "displayMode": "table", "placement": "bottom" },
         "tooltip": { "mode": "multi", "sort": "desc" }
       },
-      "title": "Requests per Second by Endpoint",
+      "title": "Requests per Second",
       "type": "timeseries",
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
-          "expr": "sum(rate(http_server_duration_milliseconds_count{service_name=\"laborables-api\"}[5m])) by (http_target)",
-          "legendFormat": "{{http_target}}",
+          "expr": "sum(rate(http_server_duration_milliseconds_count{service_name=\"dias-api\"}[5m])) by (http_method, http_status_code)",
+          "legendFormat": "{{http_method}} {{http_status_code}}",
           "refId": "A"
+        },
+        {
+          "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
+          "expr": "sum(rate(http_server_duration_milliseconds_count{service_name=\"dias-api\"}[5m]))",
+          "legendFormat": "total",
+          "refId": "B"
         }
       ]
     },
@@ -386,19 +390,19 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
-          "expr": "histogram_quantile(0.5, sum(rate(http_server_duration_milliseconds_bucket{service_name=\"laborables-api\"}[5m])) by (le))",
+          "expr": "histogram_quantile(0.5, sum(rate(http_server_duration_milliseconds_bucket{service_name=\"dias-api\"}[5m])) by (le))",
           "legendFormat": "p50",
           "refId": "A"
         },
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
-          "expr": "histogram_quantile(0.95, sum(rate(http_server_duration_milliseconds_bucket{service_name=\"laborables-api\"}[5m])) by (le))",
+          "expr": "histogram_quantile(0.95, sum(rate(http_server_duration_milliseconds_bucket{service_name=\"dias-api\"}[5m])) by (le))",
           "legendFormat": "p95",
           "refId": "B"
         },
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
-          "expr": "histogram_quantile(0.99, sum(rate(http_server_duration_milliseconds_bucket{service_name=\"laborables-api\"}[5m])) by (le))",
+          "expr": "histogram_quantile(0.99, sum(rate(http_server_duration_milliseconds_bucket{service_name=\"dias-api\"}[5m])) by (le))",
           "legendFormat": "p99",
           "refId": "C"
         }
@@ -448,7 +452,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
-          "expr": "sum(rate(http_server_duration_milliseconds_count{service_name=\"laborables-api\"}[5m])) by (http_status_code)",
+          "expr": "sum(rate(http_server_duration_milliseconds_count{service_name=\"dias-api\"}[5m])) by (http_status_code)",
           "legendFormat": "{{http_status_code}}",
           "refId": "A"
         }
@@ -498,13 +502,13 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
-          "expr": "histogram_quantile(0.5, sum(rate(http_server_duration_milliseconds_bucket{service_name=\"laborables-api\"}[5m])) by (le, http_method))",
+          "expr": "histogram_quantile(0.5, sum(rate(http_server_duration_milliseconds_bucket{service_name=\"dias-api\"}[5m])) by (le, http_method))",
           "legendFormat": "p50 - {{http_method}}",
           "refId": "A"
         },
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
-          "expr": "histogram_quantile(0.95, sum(rate(http_server_duration_milliseconds_bucket{service_name=\"laborables-api\"}[5m])) by (le, http_method))",
+          "expr": "histogram_quantile(0.95, sum(rate(http_server_duration_milliseconds_bucket{service_name=\"dias-api\"}[5m])) by (le, http_method))",
           "legendFormat": "p95 - {{http_method}}",
           "refId": "B"
         }
@@ -554,19 +558,19 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
-          "expr": "histogram_quantile(0.5, sum(rate(http_server_response_size_bytes_bucket{service_name=\"laborables-api\"}[5m])) by (le))",
+          "expr": "histogram_quantile(0.5, sum(rate(http_server_response_size_bytes_bucket{service_name=\"dias-api\"}[5m])) by (le))",
           "legendFormat": "p50",
           "refId": "A"
         },
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
-          "expr": "histogram_quantile(0.95, sum(rate(http_server_response_size_bytes_bucket{service_name=\"laborables-api\"}[5m])) by (le))",
+          "expr": "histogram_quantile(0.95, sum(rate(http_server_response_size_bytes_bucket{service_name=\"dias-api\"}[5m])) by (le))",
           "legendFormat": "p95",
           "refId": "B"
         },
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
-          "expr": "histogram_quantile(0.99, sum(rate(http_server_response_size_bytes_bucket{service_name=\"laborables-api\"}[5m])) by (le))",
+          "expr": "histogram_quantile(0.99, sum(rate(http_server_response_size_bytes_bucket{service_name=\"dias-api\"}[5m])) by (le))",
           "legendFormat": "p99",
           "refId": "C"
         }
@@ -868,7 +872,175 @@
     },
     {
       "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
-      "gridPos": { "h": 10, "w": 24, "x": 0, "y": 53 },
+      "gridPos": { "h": 8, "w": 8, "x": 0, "y": 53 },
+      "id": 23,
+      "options": {
+        "color": { "mode": "palette-classic" },
+        "custom": {
+          "axisCenteredZero": false,
+          "axisColorMode": "text",
+          "axisLabel": "",
+          "axisPlacement": "auto",
+          "barAlignment": 0,
+          "drawStyle": "line",
+          "fillOpacity": 20,
+          "gradientMode": "none",
+          "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+          "lineInterpolation": "smooth",
+          "lineWidth": 2,
+          "pointSize": 5,
+          "scaleDistribution": { "type": "linear" },
+          "showPoints": "never",
+          "spanNulls": false,
+          "stacking": { "group": "A", "mode": "normal" },
+          "thresholdsStyle": { "mode": "off" }
+        },
+        "legend": { "calcs": ["mean", "max"], "displayMode": "table", "placement": "bottom" },
+        "tooltip": { "mode": "multi", "sort": "desc" },
+        "mappings": [],
+        "thresholds": { "mode": "absolute", "steps": [{ "color": "green", "value": null }] },
+        "unit": "short"
+      },
+      "title": "Logs by Level",
+      "type": "timeseries",
+      "targets": [
+        {
+          "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
+          "expr": "sum(count_over_time({service_name=\"dias-api\"} | severity_text=\"ERROR\" [1m]))",
+          "legendFormat": "ERROR",
+          "refId": "A"
+        },
+        {
+          "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
+          "expr": "sum(count_over_time({service_name=\"dias-api\"} | severity_text=\"WARN\" [1m]))",
+          "legendFormat": "WARN",
+          "refId": "B"
+        },
+        {
+          "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
+          "expr": "sum(count_over_time({service_name=\"dias-api\"} | severity_text=\"INFO\" [1m]))",
+          "legendFormat": "INFO",
+          "refId": "C"
+        },
+        {
+          "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
+          "expr": "sum(count_over_time({service_name=\"dias-api\"} | severity_text=\"DEBUG\" [1m]))",
+          "legendFormat": "DEBUG",
+          "refId": "D"
+        }
+      ]
+    },
+    {
+      "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
+      "gridPos": { "h": 8, "w": 8, "x": 8, "y": 53 },
+      "id": 24,
+      "options": {
+        "color": { "mode": "palette-classic" },
+        "custom": {
+          "axisCenteredZero": false,
+          "axisColorMode": "text",
+          "axisLabel": "",
+          "axisPlacement": "auto",
+          "barAlignment": 0,
+          "drawStyle": "line",
+          "fillOpacity": 20,
+          "gradientMode": "none",
+          "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+          "lineInterpolation": "smooth",
+          "lineWidth": 2,
+          "pointSize": 5,
+          "scaleDistribution": { "type": "linear" },
+          "showPoints": "never",
+          "spanNulls": false,
+          "stacking": { "group": "A", "mode": "normal" },
+          "thresholdsStyle": { "mode": "off" }
+        },
+        "legend": { "calcs": ["mean", "max"], "displayMode": "table", "placement": "bottom" },
+        "tooltip": { "mode": "multi", "sort": "desc" },
+        "mappings": [],
+        "thresholds": { "mode": "absolute", "steps": [{ "color": "green", "value": null }] },
+        "unit": "short"
+      },
+      "title": "Logs by Scope",
+      "type": "timeseries",
+      "targets": [
+        {
+          "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
+          "expr": "sum(count_over_time({service_name=\"dias-api\"} | scope_name=\"app.api.v1.endpoints.festivos\" [1m]))",
+          "legendFormat": "festivos",
+          "refId": "A"
+        },
+        {
+          "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
+          "expr": "sum(count_over_time({service_name=\"dias-api\"} | scope_name=\"app.api.v1.endpoints.laborables\" [1m]))",
+          "legendFormat": "laborables",
+          "refId": "B"
+        },
+        {
+          "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
+          "expr": "sum(count_over_time({service_name=\"dias-api\"} | scope_name=\"app.services.internal.scraping_service\" [1m]))",
+          "legendFormat": "scraping_service",
+          "refId": "C"
+        },
+        {
+          "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
+          "expr": "sum(count_over_time({service_name=\"dias-api\"} | scope_name=\"app.core.decorators\" [1m]))",
+          "legendFormat": "decorators",
+          "refId": "D"
+        },
+        {
+          "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
+          "expr": "sum(count_over_time({service_name=\"dias-api\"} | scope_name=\"uvicorn.access\" [1m]))",
+          "legendFormat": "uvicorn.access",
+          "refId": "E"
+        }
+      ]
+    },
+    {
+      "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
+      "gridPos": { "h": 8, "w": 8, "x": 16, "y": 53 },
+      "id": 25,
+      "options": {
+        "color": { "mode": "palette-classic" },
+        "custom": {
+          "axisCenteredZero": false,
+          "axisColorMode": "text",
+          "axisLabel": "",
+          "axisPlacement": "auto",
+          "barAlignment": 0,
+          "drawStyle": "line",
+          "fillOpacity": 20,
+          "gradientMode": "none",
+          "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+          "lineInterpolation": "smooth",
+          "lineWidth": 2,
+          "pointSize": 5,
+          "scaleDistribution": { "type": "linear" },
+          "showPoints": "never",
+          "spanNulls": false,
+          "stacking": { "group": "A", "mode": "normal" },
+          "thresholdsStyle": { "mode": "off" }
+        },
+        "mappings": [],
+        "thresholds": { "mode": "absolute", "steps": [{ "color": "green", "value": null }] },
+        "unit": "short",
+        "legend": { "calcs": ["mean", "max"], "displayMode": "table", "placement": "bottom" },
+        "tooltip": { "mode": "multi", "sort": "desc" }
+      },
+      "title": "Warnings by Scope",
+      "type": "timeseries",
+      "targets": [
+        {
+          "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
+          "expr": "sum(count_over_time({service_name=\"dias-api\"} | severity_text=\"WARN\" [1m])) by (scope_name)",
+          "legendFormat": "{{scope_name}}",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
+      "gridPos": { "h": 10, "w": 12, "x": 0, "y": 61 },
       "id": 15,
       "options": {
         "dedupStrategy": "none",
@@ -885,7 +1057,7 @@
       "targets": [
         {
           "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
-          "expr": "{service_name=\"laborables-api\"}",
+          "expr": "{service_name=\"dias-api\"}",
           "legendFormat": "",
           "refId": "A"
         }
@@ -893,27 +1065,7 @@
     },
     {
       "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
-      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 63 },
-      "id": 16,
-      "options": {
-        "color": { "mode": "palette-classic" },
-        "customize": {},
-        "tooltip": { "mode": "single", "sort": "none" }
-      },
-      "title": "Logs by Level",
-      "type": "timeseries",
-      "targets": [
-        {
-          "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
-          "expr": "sum(count_over_time({service_name=\"laborables-api\"} |~ \"(?i)(debug|info|warn|error|critical)\" [1m]))",
-          "legendFormat": "logs",
-          "refId": "A"
-        }
-      ]
-    },
-    {
-      "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
-      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 63 },
+      "gridPos": { "h": 10, "w": 12, "x": 12, "y": 61 },
       "id": 17,
       "options": {
         "dedupStrategy": "none",
@@ -925,12 +1077,12 @@
         "sortOrder": "Descending",
         "wrapLogMessage": true
       },
-      "title": "Error Logs",
+      "title": "Error & Warning Logs",
       "type": "logs",
       "targets": [
         {
           "datasource": { "type": "loki", "uid": "${DS_LOKI}" },
-          "expr": "{service_name=\"laborables-api\"} |~ \"(?i)error\"",
+          "expr": "{service_name=\"dias-api\"} | severity_text=~\"WARN|ERROR\"",
           "legendFormat": "",
           "refId": "A"
         }
@@ -940,7 +1092,7 @@
   "refresh": "10s",
   "schemaVersion": 38,
   "style": "dark",
-  "tags": ["laborables", "api", "fastapi", "redis", "otel"],
+  "tags": ["dias", "api", "fastapi", "redis", "otel"],
   "templating": {
     "list": [
       {
@@ -976,8 +1128,8 @@
   "time": { "from": "now-1h", "to": "now" },
   "timepicker": {},
   "timezone": "",
-  "title": "Laborables API Dashboard",
-  "uid": "laborables-api",
+  "title": "dias API Dashboard",
+  "uid": "dias-api",
   "version": 2,
   "weekStart": ""
 }
