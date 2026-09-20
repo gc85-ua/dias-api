@@ -1,7 +1,7 @@
 services:
   otel-collector:
     image: otel/opentelemetry-collector-contrib:latest
-    container_name: laborables-otel-collector
+    container_name: otel-collector
     command: ["--config=/etc/otel-collector-config.yml"]
     volumes:
       - ./otel-collector-config.yml:/etc/otel-collector-config.yml
@@ -12,28 +12,28 @@ services:
       jaeger:
         condition: service_started
     networks:
-      - laborables-observability
+      - otel-observability
 
   jaeger:
     image: jaegertracing/all-in-one:latest
-    container_name: laborables-jaeger
+    container_name: jaeger
     environment:
       - COLLECTOR_OTLP_ENABLED=true
     ports:
       - "16686:16686"     # Jaeger UI
       - "4317:4317"       # OTLP gRPC (for Collector export)
     networks:
-      - laborables-observability
+      - otel-observability
   loki:
     image: grafana/loki:latest
-    container_name: laborables-loki
+    container_name: loki
     ports:
       - "3100:3100"       # Loki API
     networks:
-      - laborables-observability
+      - otel-observability
   prometheus:
     image: prom/prometheus:latest
-    container_name: laborables-prometheus
+    container_name: prometheus
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
@@ -41,11 +41,11 @@ services:
     depends_on:
       - otel-collector
     networks:
-      - laborables-observability
+      - otel-observability
 
   grafana:
     image: grafana/grafana:latest
-    container_name: laborables-grafana
+    container_name: grafana
     environment:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
@@ -59,8 +59,9 @@ services:
       - prometheus
       - jaeger
       - loki
+      - otel-collector
     networks:
-      - laborables-observability
+      - otel-observability
 
   cache:
     image: valkey/valkey:latest
@@ -68,33 +69,34 @@ services:
     ports:
       - "6379:6379"
     networks:
-      - laborables-observability
+      - otel-observability
 
   app:
     build:
       context: .
       dockerfile: dockerfile
-    container_name: laborables-api
+    container_name: dias-api
     environment:
+      - LOG_LEVEL=INFO
       - CACHE_DB_HOST=cache
       - CACHE_DB_PORT=6379
       - CACHE_DB=0
-      - OTEL_SERVICE_NAME=laborables-api
+      - OTEL_SERVICE_NAME=dias-api
       - OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4318
       - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
       - OTEL_LOGS_EXPORTER=otlp
       - OTEL_TRACES_EXPORTER=otlp
       - OTEL_METRICS_EXPORTER=otlp
       - OTEL_METRICS_EXPORT_INTERVAL=5000
-      - OTEL_PYTHON_LOG_LEVEL=debug
+      - OTEL_PYTHON_LOG_LEVEL=INFO
     ports:
       - "8000:8000"       # FastAPI app
     depends_on:
       - otel-collector
       - cache
     networks:
-      - laborables-observability
+      - otel-observability
 
 networks:
-  laborables-observability:
+  otel-observability:
     driver: bridge
