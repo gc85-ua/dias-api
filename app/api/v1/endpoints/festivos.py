@@ -13,8 +13,8 @@ endpoint = APIRouter()
 
 @endpoint.get("/", 
               response_model=FestivosResponse, 
-              summary="Obtener días festivos por mes según municipio", 
-              description="Devuelve un objeto con los días festivos de cada mes detallando tipo, nombre y fecha de cada festivo.")
+              summary="Obtener los días festivos de cada municipio según año", 
+              description="Devuelve un objeto con la lista de los días festivos estrcuturado en tipo, nombre y fecha.")
 async def get_festivos(municipio: str, año: int | None = Query(default=datetime.now(tz=UTC).year, description="Año para el cual se desean obtener los días festivos. Si no se proporciona, se utilizará el año actual.")):
     logger.info("Fetching festivos", extra={"event_name": "festivos.fetch", "municipio": municipio, "año": año})
     response = gf(year=año, location=municipio)

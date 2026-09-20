@@ -13,7 +13,7 @@ endpoint = APIRouter()
 
 @endpoint.get("/", 
               response_model=LaborablesResponse, 
-              summary="Obtener días laborables por mes según municipio", 
+              summary="Obtener días laborables por mes según municipio y año", 
               description="Devuelve un objeto con los días laborables de cada mes y el total de días laborables en el año.")
 async def get_laborables(municipio: str, año: int | None = Query(default=datetime.now(tz=UTC).year, description="Año para el cual se desean obtener los días laborables. Si no se proporciona, se utilizará el año actual.")):
     logger.info("Fetching laborables", extra={"event_name": "laborables.fetch", "municipio": municipio, "año": año})

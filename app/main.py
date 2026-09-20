@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(
     title="API de Dias Laborables y Festivos en España",
-    description="Servicio para consultar días laborables según municipio y año, con soporte para diferentes formatos de mes.",
+    description="Servicio para consultar días laborables mensuales según municipio y año, así como días festivos en España.",
     version="1.0.0",
 )
 
