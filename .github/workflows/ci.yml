@@ -6,6 +6,12 @@ on:
       - "v*.*.*"
     branches:
       - main
+    paths:
+      - "app/**"
+      - "tests/**"
+      - "dockerfile"
+      - "uv.lock"
+      - ".python-version"
 
 permissions:
   contents: read
