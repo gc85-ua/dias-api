@@ -6,6 +6,7 @@ from app.services.internal.scraping_service import (
     get_path_for_location,
 )
 
+
 def get_festivos(
     year: int,
     location: str,
