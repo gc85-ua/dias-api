@@ -1,0 +1,15 @@
+name: Run reusable CI
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+    branches:
+      - main
+
+jobs:
+  test-and-publish:
+    uses: ./.github/workflows/reusable-ci.yml
+    with:
+      image-name: dias-api
+      dockerfile-path: ./dockerfile

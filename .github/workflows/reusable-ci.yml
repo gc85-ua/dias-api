@@ -1,0 +1,99 @@
+name: "Reusable test with pytest and publish container to registry"
+
+on:
+  workflow_call:
+    inputs:
+      app-folder:
+          required: false
+          type: string
+          default: "./app"
+      image-name:
+          required: true
+          type: string
+      dockerfile-path:
+          required: false
+          type: string
+          default: "./dockerfile"
+    outputs:
+      image-digest:
+          description: "The digest of the published image"
+          value: ${{ jobs.build-and-publish.outputs.digest }}
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: setup uv
+        uses: ./.github/actions/setup-uv
+        with:
+          version: "0.12.13"
+          python-version-file: .python-version
+      - name: Run Ruff
+        run: uvx ruff check ${{ inputs.app-folder }}
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: setup uv
+        uses: ./.github/actions/setup-uv
+        with:
+          version: "0.12.13"
+          python-version-file: .python-version
+      - name: Install dependencies
+        run: uv sync --locked
+      - name: Run tests
+        run: uv run pytest
+  build-and-publish:
+    needs: [lint, test]
+    runs-on: ubuntu-latest
+    outputs:
+      digest: ${{ steps.build.outputs.digest }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: setup Qemu
+        uses: docker/setup-qemu-action@v3
+      - name: setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository_owner }}/${{ inputs.image-name }}
+          tags: |
+            # identical tag from pushed branch or tag
+            type=ref,event=tag
+            # full version: major.minor.patch
+            type=semver,pattern={{version}}
+            # major.minor, auto patching
+            type=semver,pattern={{major}}.{{minor}}
+            # major only, auto no breaking updates
+            type=semver,pattern={{major}}
+            # branch name
+            type=ref,event=branch
+            # commit reference, short format: sha-7d5822c
+            type=sha
+      - name: Build and push
+        id: build
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          platforms: linux/amd64,linux/arm64
+          file: ${{ inputs.dockerfile-path }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          
+
