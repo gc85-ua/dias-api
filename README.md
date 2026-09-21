@@ -5,7 +5,11 @@ API en castellano para la obtención de los días laborables por mes de algunos 
 ![Swagger UI](.github/docs/images/swagger.png)
 
 ## Propósito
-La finalidad del proyecto recae en poder **añadir observabilidad** a una API sencilla mediante la generación, recolección y visualización de **metricas**, **registros** y **trazas**. Para ello se ha optado por utilizar la instrumentalización de **OpenTelemetry** limitando lo máximo posible el acoplamiento del framework de observabilidad al resto de la aplicación. Del mismo modo, se trata de un ejercicio para aplicar abstracciones mediante la separación de responsabilidades, inyección de dependencias o el manejo y jerarquización de errores.
+La finalidad del proyecto recae en poder **añadir observabilidad** a una API sencilla mediante la generación, recolección y visualización de **metricas**, **registros** y **trazas**. Para ello se ha optado por utilizar la instrumentalización de **OpenTelemetry** limitando lo máximo posible el acoplamiento del framework de observabilidad al resto de la aplicación.
+
+Del mismo modo, se trata de un ejercicio para aplicar abstracciones mediante la separación de responsabilidades, inyección de dependencias o el manejo y jerarquización de errores.
+
+Como finalidad última, sirve para practicar CI con GitHub Actions.
 
 ### ¿Por qué OpenTelemetry?
 
