@@ -33,3 +33,9 @@ dev = [
     "pytest>=9.1.1",
     "pytest-cov>=6.0",
 ]
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+]
